@@ -53,8 +53,8 @@ var DinnerModel = function () {
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
         var totalPrice = 0;
-        for (i in menu) {
-            for(p in menu[i].price) {
+        for (key in menu) {
+            for(p in menu[key].price) {
                 totalPrice += p * numberOfGuests;
             }
         }
@@ -65,7 +65,7 @@ var DinnerModel = function () {
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2
         for (var i = 0; i < menu.length; i++) {
-            if(menu[i].id) {
+            if(menu[i].id == id) {
                 menu.splice(i, 1, menu.getSelectedDish());
             } else {
                 menu.push(menu.getSelectedDish());
@@ -77,7 +77,7 @@ var DinnerModel = function () {
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
         for (var i = 0; i < menu.length; i++) {
-            if(menu[i].id) {
+            if(menu[i].id == id) {
                 menu.splice(i, 1);
             }
         }
