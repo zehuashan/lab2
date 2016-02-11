@@ -8,9 +8,5 @@ var ExampleView = function (container,model) {
  this.minusButton = container.find("#minusGuest");
  
  this.numberOfGuests.html(model.getNumberOfGuests());
-<<<<<<< HEAD
-=======
- this.plusButton.html(model.plusGuest());
- this.minusButton.html(model.minusGuest());
->>>>>>> hz
+
 }
