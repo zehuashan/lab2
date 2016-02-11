@@ -27,20 +27,16 @@ var DinnerModel = function () {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function () {
 		//TODO Lab 2
-        
-		//skapa en ny lista
-		//use getAllDishes utan filter
-		//spara undan dessa i det nyskapade listan
-		//return
+        return menu[];
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2
         var allIngredients = new Array();
-        for (key in menu) {
-            for(ing in menu[key].ingredients) {
-                allIngredients.push(menu[key].allIngredients[ing]);
+        for (i in menu) {
+            for(ing in menu[i].ingredients) {
+                allIngredients.push(menu[i].allIngredients[ing]);
             }
         }
 	}
@@ -49,8 +45,8 @@ var DinnerModel = function () {
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
         var totalPrice = 0;
-        for (key in menu) {
-            for(p in menu[key].price) {
+        for (i in menu) {
+            for(p in menu[i].price) {
                 totalPrice += p * numberOfGuests;
             }
         }
