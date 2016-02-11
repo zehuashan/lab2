@@ -27,7 +27,7 @@ var DinnerModel = function () {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function () {
 		//TODO Lab 2
-
+        
 		//skapa en ny lista
 		//use getAllDishes utan filter
 		//spara undan dessa i det nyskapade listan
@@ -37,11 +37,23 @@ var DinnerModel = function () {
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2
+        var allIngredients = new Array();
+        for (key in menu) {
+            for(ing in menu[key].ingredients) {
+                allIngredients.push(menu[key].allIngredients[ing]);
+            }
+        }
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
+        var totalPrice = 0;
+        for (key in menu) {
+            for(p in menu[key].price) {
+                totalPrice += p * numberOfGuests;
+            }
+        }
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
