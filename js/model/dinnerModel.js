@@ -4,6 +4,14 @@ var DinnerModel = function () {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 4;
 	var menu = [];
+    
+    this.plusGuest = function () {
+        numberOfGuests = numberOfGuests + 1;
+    }
+    
+    this.minusGuest = function () {
+        numberOfGuests -= 1;
+    }
 
 	this.setNumberOfGuests = function (num) {
 		//TODO Lab 2
@@ -27,7 +35,7 @@ var DinnerModel = function () {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function () {
 		//TODO Lab 2
-        return menu[];
+        return menu;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
@@ -45,8 +53,8 @@ var DinnerModel = function () {
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
         var totalPrice = 0;
-        for (i in menu) {
-            for(p in menu[i].price) {
+        for (key in menu) {
+            for(p in menu[key].price) {
                 totalPrice += p * numberOfGuests;
             }
         }
@@ -56,8 +64,8 @@ var DinnerModel = function () {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2
-        for (int i = 0; i < menu.length; i++) {
-            if(menu[i].id)
+        for (var i = 0; i < menu.length; i++) {
+            if(menu[i].id == id) {
                 menu.splice(i, 1, menu.getSelectedDish());
             } else {
                 menu.push(menu.getSelectedDish());
@@ -68,8 +76,8 @@ var DinnerModel = function () {
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
-        for (int i = 0; i < menu.length; i++) {
-            if(menu[i].id)
+        for (var i = 0; i < menu.length; i++) {
+            if(menu[i].id == id) {
                 menu.splice(i, 1);
             }
         }
