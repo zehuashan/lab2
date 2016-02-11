@@ -5,3 +5,45 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.topnav{ 
+font-size: 350%;
+}
+.navtext{
+text-align: left;
+font-size: 150%;
+}
+.navbar {
+ background:rgba(255,165,0,0.7);
+}
+
+.container-mid {
+position: absolute;
+background:rgba(250,250,250,0.7);
+border-radius: 0px;
+margin-right: auto;
+margin-left: 5%;
+margin-top: 10%;
+width: 35%;
+height: 35vh;
+}
+.bottom {
+position: absolute;
+bottom: 5%;
+margin-left: 5%;
+}
+
+.startquickly{
+position: absolute;
+bottom: 15%;
+margin-left: 5%;
+}
+
+.floattext{
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.floattitle{
+margin-left: 5%;
+margin-right: 5%;
+}
