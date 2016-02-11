@@ -8,5 +8,4 @@ var ExampleView = function (container,model) {
  this.minusButton = container.find("#minusGuest");
  
  this.numberOfGuests.html(model.getNumberOfGuests());
- 
 }
