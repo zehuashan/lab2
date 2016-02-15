@@ -13,6 +13,7 @@
 	
   </head>
   <body>
+  <div id="container">
   <nav class="navbar navbar-default">
   <div class="row">
 	<div class="col-sm-1"></div>
@@ -20,11 +21,14 @@
 
 	</div>
   </nav>
- <div class="leftcont" id="view2">
- 	<div class="leftdiv1">
+
+ <div class="leftcont">
+
+ 	<div class="leftdiv1" id="view2">
  		<h1>My Dinner</h1>
- 		<h3>People: </h3>
- 		<h3><span id="numberOfGuests"></span></h3>
+ 		<h3>People: <span id="numberOfGuests"></span></h3>
+    <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+    <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
  	</div>
 
  	<div class="leftdiv2">
@@ -34,8 +38,8 @@
  	</div>
 
 	<div class="leftdiv3">		
-		<div class="col-sm-4"><p class="leftcontlefttext">Pending</p></div>
- 		<div class="col-sm-4"></div>
+		<div class="col-sm-6"><p class="leftcontlefttext">Pending</p></div>
+ 		<div class="col-sm-2"></div>
  		<div class="col-sm-4"><p class="leftcontrighttext">0.00 kr</p></div>
  	</div>
 
@@ -44,10 +48,19 @@
  		<div class="col-sm-4"></div>
  		<div class="col-sm-4"><p class="leftcontrighttext">SEK 0.00</p></div>
 	</div>
-	<div class="leftdiv5"><div class="confirmbtn"><button type="button" class="btn btn-secondary">Confirm Dinner</button></div></div>
+
+	<div class="leftdiv5">
+    <div class="confirmbtn">
+      <button type="button" class="btn btn-secondary">Confirm Dinner</button>
+    </div>
+  </div>
+
+
  </div>
+
   	<div class="rightcont"></div>
     
+  </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
@@ -58,6 +71,8 @@
 	<script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
 	<script src="js/view/view2.js"></script>
+  <script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+
   </body>
 </html>
