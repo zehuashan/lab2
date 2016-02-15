@@ -107,12 +107,12 @@ body {
 	position: relative;
 	padding-left: 5%;
 	width:100%;
-	height:15vh;
+	height:150px;
 }
 .leftdiv2{
 	position: relative;
 	width:100%;
-	height:5vh;
+	height:50px;
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
 }
@@ -142,14 +142,47 @@ body {
 }
 
 .leftcontlefttext{
-	font-weight: 900;
 	margin-top: 10%;
+	font-weight: 900;
 	float:left;
 }
 .leftcontrighttext{
-	margin-top: 10%;
-	float:right;
+	margin-top: 17%;
 	font-weight: 900;
+	float:right;
+}
+/* from marcus old index.css */
+.main {
+	position: absolute;
+	border: 2px solid #000;
+	border-left: none;
+	height: 80vh;
+	width: 80%;
+	left: 20%;
+}
+
+.selectdish {
+	position: relative;
+	left: 3%;
+}
+
+.form-inline {
+	position: relative;
+	left: 5%;
+}
+
+#line2 {
+	border: 1px solid #000;
+	position: absolute;
+	top: 149px;
+	width: 100%;
+}
+
+#rowimg {
+	top: 50%;
+	position: absolute;
+	border: 2px solid #000;
+	width: 100%;
 }
 
 
