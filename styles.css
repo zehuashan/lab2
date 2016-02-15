@@ -60,6 +60,9 @@ border-bottom: 3px solid;
 	top:2vh;
 	background:rgba(255,165,0,1);
 }
+.menuview{
+	width:100%;
+}
 .menuviewitem{
 	position:relative;
 	top:27vh;
@@ -68,11 +71,11 @@ border-bottom: 3px solid;
 }
 .totalcost{
 	position:relative;
-	top:45vh; 
+	top:40vh; 
 	color: #A91C1C; 
 }
 .totallabel{
-	position:absolute;
+	position:relative;
 	top:40vh; 
 }
 .menuviewpic{
