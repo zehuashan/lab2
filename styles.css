@@ -58,15 +58,16 @@ border-bottom: 3px solid;
 .btn-secondary{
 	position:absolute;
 	top:2vh;
+	background:rgba(255,165,0,1);
 }
 .menuviewitem{
-	position:absolute;
-	top:45vh;
-	right:25%;   
+	position:relative;
+	top:27vh;
+	text-align: right;   
 	color: #A91C1C;
 }
 .totalcost{
-	position:absolute;
+	position:relative;
 	top:45vh; 
 	color: #A91C1C; 
 }
@@ -75,10 +76,13 @@ border-bottom: 3px solid;
 	top:40vh; 
 }
 .menuviewpic{
-	position:absolute;
+	position:relative;
 	top:25vh;
+	float:right;
 }
 .printbtncon{
 	position:absolute;
-	bottom:2vh;
+	bottom:25vh;
+	left:45%;
+
 }
