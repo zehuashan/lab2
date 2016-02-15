@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<!-- own css -->
+	<link rel="stylesheet" href="styles.css">
+	
+  </head>
+  <body>
+  <div id="container">
+  <nav class="navbar navbar-default">
+  <div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-9"><h1 class="topnav">HOMELETTE<small> From the best chefs in the world directly into your kitchen</small></div>
+
+	</div>
+  </nav>
+
+ <div class="leftcont">
+
+ 	<div class="leftdiv1" id="view2">
+ 		<h1>My Dinner</h1>
+ 		<h3>People: <span id="numberOfGuests"></span></h3>
+    <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+    <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+ 	</div>
+
+ 	<div class="leftdiv2">
+ 		<div class="col-sm-6"><p class="leftcontlefttext">Dish Name</p></div>
+ 		<div class="col-sm-2"></div>
+ 		<div class="col-sm-4"><p class="leftcontrighttext">Cost</p></div>
+ 	</div>
+
+	<div class="leftdiv3">		
+		<div class="col-sm-6"><p class="leftcontlefttext">Pending</p></div>
+ 		<div class="col-sm-2"></div>
+ 		<div class="col-sm-4"><p class="leftcontrighttext">0.00 kr</p></div>
+ 	</div>
+
+	<div class="leftdiv4">
+		<div class="col-sm-4"></div>
+ 		<div class="col-sm-4"></div>
+ 		<div class="col-sm-4"><p class="leftcontrighttext">SEK 0.00</p></div>
+	</div>
+
+	<div class="leftdiv5">
+    <div class="confirmbtn">
+      <button type="button" class="btn btn-secondary">Confirm Dinner</button>
+    </div>
+  </div>
+
+
+ </div>
+
+  	<div class="rightcont"></div>
+    
+  </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+	<script src="js/view/view2.js"></script>
+  <script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+
+  </body>
+</html>
