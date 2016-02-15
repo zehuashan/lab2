@@ -60,20 +60,26 @@ border-bottom: 3px solid;
 	top:2vh;
 	background:rgba(255,165,0,1);
 }
+.menuview{
+	position: absolute;
+	top:16vh;
+	height: 80vh;
+	width:100%;
+}
 .menuviewitem{
 	position:relative;
-	top:27vh;
-	text-align: right;   
+	text-align: right; 
+	top:27vh; 
 	color: #A91C1C;
 }
 .totalcost{
 	position:relative;
-	top:45vh; 
+	top:44vh; 
 	color: #A91C1C; 
 }
 .totallabel{
-	position:absolute;
-	top:40vh; 
+	position:relative;
+	top:44vh; 
 }
 .menuviewpic{
 	position:relative;
