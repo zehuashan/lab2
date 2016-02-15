@@ -8,12 +8,10 @@ body {
 .topnav{ 
 font-size: 350%;
 }
-.navtext{
-text-align: left;
-font-size: 150%;
-}
 .navbar {
- background:rgba(255,165,0,0.7);
+ background:rgba(255,165,0,1);
+ height:15vh;
+ border-bottom: 3px solid;
 }
 
 .container-mid {
@@ -46,4 +44,41 @@ margin-right: 5%;
 .floattitle{
 margin-left: 5%;
 margin-right: 5%;
+}
+
+.statusbar{
+position: absolute;
+background:rgba(250,250,250,1);
+top:15vh;
+width:100%;
+height: 8vh;
+border-bottom: 3px solid;
+}
+
+.btn-secondary{
+	position:absolute;
+	top:2vh;
+}
+.menuviewitem{
+	position:absolute;
+	top:45vh;
+	right:25%;   
+	color: #A91C1C;
+}
+.totalcost{
+	position:absolute;
+	top:45vh; 
+	color: #A91C1C; 
+}
+.totallabel{
+	position:absolute;
+	top:40vh; 
+}
+.menuviewpic{
+	position:absolute;
+	top:25vh;
+}
+.printbtncon{
+	position:absolute;
+	bottom:2vh;
 }
