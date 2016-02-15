@@ -92,8 +92,8 @@ body {
 	left:45%;
 }
 .confirmbtn{
-	position: relative;
-	left:30%;
+	position: absolute;
+	left: 30%;
 }
 .leftcont{
 	position: absolute;
@@ -185,4 +185,9 @@ body {
 	width: 100%;
 }
 
+#rowtext {
+	top: 75%;
+	position: absolute;
+	width: 100%;
+}
 
