@@ -1,5 +1,5 @@
 //ExampleView Object constructor
-var view2 = function (container,model) {
+var View2 = function (container,model) {
  
  // Get all the relevant elements of the view (ones that show data
  // and/or ones that responded to interaction)
