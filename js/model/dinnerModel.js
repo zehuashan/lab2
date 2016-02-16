@@ -4,7 +4,7 @@ var DinnerModel = function () {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 4;
 	var menu = [];
-    
+
     this.plusGuest = function () {
         numberOfGuests = numberOfGuests + 1;
     }
@@ -63,6 +63,19 @@ var DinnerModel = function () {
             totalPrice += allIngredients[key].price;
         }
         return totalPrice * numberOfGuests;
+	}
+
+	this.getDishPrice = function (id) {
+		for (key in dishes) {
+			if (dishes[key].id == id) {
+				var pris = 0;
+				for (ingredient in dishes[key].ingredients) {
+					pris += dishes[key].ingredients[ingredient].price;
+				}
+				pris = pris*numberOfGuests;
+				return pris;
+			};
+		}
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu

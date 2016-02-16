@@ -20,23 +20,30 @@
 
 	</div>
   </nav>
+
+<div id="overview">
  
  <div class="statusbar"> 
  	<div class="col-md-1"></div>
  	<div class="col-md-8">
- 	<h1 class="statustext"> My Dinner: 4 People</h1></div>
+ 	<h1 class="statustext"> My Dinner: <span>4</span> People</h1></div>
  	<div class="col-md-1"><button type="button" class="btn btn-secondary">Go back and edit dinner</button></div>
  </div>
 
 <div class="menuview"> 
  	<div class="col-md-3"></div>
- 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/bakedbrie.jpg" height="250" width="250"></div><h1 class="menuviewitem">100 kr</h1></div>
- 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/meatballs.jpg" height="250" width="250"></div><h1 class="menuviewitem">100 kr</h1></div>
- 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/icecream.jpg" height="250" width="250"></div><h1 class="menuviewitem">100 kr</h1></div>
- 	<div class="col-md-3"> <h1 class="totallabel">Total:</h1><h1 class="totalcost">300 kr</h1></div>
+ 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/bakedbrie.jpg" height="250" width="250"></div><h1 class="menuviewitem" id="menu1"> <span>100</span> kr </h1></div>
+
+ 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/meatballs.jpg" height="250" width="250"></div><h1 class="menuviewitem" id="menu100"> <span>100 kr</span> kr </h1></div>
+
+ 	<div class="col-md-2"> <div class="menuviewpic"> <img src="././images/icecream.jpg" height="250" width="250"></div><h1 class="menuviewitem" id="menu200"> <span>100 kr</span> kr </h1></div>
+
+ 	<div class="col-md-3"> <h1 class="totallabel">Total:</h1><h1 class="totalcost" id="totPrice"> <span>300</span> kr</h1></div>
  </div>
 
 <div class="printbtncon"><button type="button" class="btn btn-secondary">Print Full Recipe</button></div>
+
+</div>
 
 
 
@@ -51,6 +58,6 @@
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
+  <script src="js/view/OverviewView.js"></script>
   </body>
 </html>

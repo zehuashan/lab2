@@ -29,7 +29,11 @@ body {
 	bottom: 5%;
 	margin-left: 5%;
 }
-
+.bottom1 {
+	position: absolute;
+	bottom: 5%;
+	margin-left: 2%;
+}
 .startquickly{
 	position: absolute;
 	bottom: 15%;
@@ -93,7 +97,7 @@ body {
 }
 .confirmbtn{
 	position: absolute;
-	left: 30%;
+	left:30%;
 }
 .leftcont{
 	position: absolute;
@@ -151,6 +155,24 @@ body {
 	font-weight: 900;
 	float:right;
 }
+
+.rightcont1{
+	position: relative;
+	height:50vh;
+	width: 50%;
+}
+.rightcont2{
+	position: absolute;
+	border: 2px solid black;
+	height:35vh;
+	width: 50%;
+	right:0px;
+	top:0px;
+}
+.rightcont3{
+	top:40vh;
+}
+
 /* from marcus old index.css */
 .main {
 	position: absolute;
@@ -176,6 +198,14 @@ body {
 	position: absolute;
 	top: 149px;
 	width: 100%;
+}
+
+#line3 {
+	border: 1px solid #000;
+	position: absolute;
+	left:5%;
+	top: 40%;
+	width: 80%;
 }
 
 #rowimg {
