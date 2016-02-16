@@ -134,6 +134,15 @@ var DinnerModel = function () {
 		}
 	}
 
+	this.getDishName = function (id) {
+		for (key in dishes) {
+			if(dishes[key].id == id) {
+				return dishes[key].name;
+			}
+		}
+	}
+	
+
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,

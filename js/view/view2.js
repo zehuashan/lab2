@@ -6,7 +6,12 @@ var View2 = function (container,model) {
  this.numberOfGuests = container.find("#numberOfGuests");
  this.plusButton = container.find("#plusGuest");
  this.minusButton = container.find("#minusGuest");
+ this.dishName = container.find("dishName")
  
- this.numberOfGuests.html(model.getNumberOfGuests());
-
+ container.find("#g1 span").html(model.getNumberOfGuests());
+ container.find("#dish1 span").html(model.getDishName(1));
+ container.find("#dish2 span").html(model.getDishName(2));
+ container.find("#dish3 span").html(model.getDishName(3));
+ container.find("#dish100 span").html(model.getDishName(100));
+ container.find("#dish101 span").html(model.getDishName(101));
 }

@@ -1,4 +1,4 @@
-//ExampleView Object constructor
+//ExampleView Object constructor56
 var OverviewView = function (container,model) {
 	this.numberOfGuests = container.find("#numberOfGuests");
     this.dishPrice = container.find("#dishPrice");
