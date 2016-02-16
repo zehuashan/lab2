@@ -207,13 +207,19 @@ body {
 }
 
 #rowimg {
-	top: 50%;
+	top: 35%;
 	position: absolute;
 	width: 100%;
 }
 
 #rowtext {
-	top: 75%;
+	top: 57%;
+	position: absolute;
+	width: 100%;
+	font-weight: bold;
+}
+#rowPar {
+	top: 63%;
 	position: absolute;
 	width: 100%;
 }
