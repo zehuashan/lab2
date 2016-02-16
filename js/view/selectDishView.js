@@ -10,7 +10,10 @@ var SelectDishView = function (container,model) {
  container.find("#menu100 span").html(model.getDishPrice(100));
  container.find("#menu200 span").html(model.getDishPrice(200));
  container.find("#totPrice span").html(model.getTotalMenuPrice());
- container.find("#imgT").html(model.getDish(1).image);
 
-
+ container.find("#img1").html("<img src='" + 'images/' + model.getDish(1).image + "' alt='" + model.getDish(1).name + "'>");
+ container.find("#img2").html("<img src='" + 'images/' + model.getDish(2).image + "' alt='" + model.getDish(2).name + "'>");
+ container.find("#img3").html("<img src='" + 'images/' + model.getDish(3).image + "' alt='" + model.getDish(3).name + "'>");
+ container.find("#img100").html("<img src='" + 'images/' + model.getDish(100).image + "' alt='" + model.getDish(100).name + "'>");
+ container.find("#img200").html("<img src='" + 'images/' + model.getDish(200).image + "' alt='" + model.getDish(200).name + "'>");
 }
