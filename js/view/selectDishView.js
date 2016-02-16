@@ -10,4 +10,7 @@ var SelectDishView = function (container,model) {
  container.find("#menu100 span").html(model.getDishPrice(100));
  container.find("#menu200 span").html(model.getDishPrice(200));
  container.find("#totPrice span").html(model.getTotalMenuPrice());
+ container.find("#imgT").html(model.getDish(1).image);
+
+
 }
