@@ -3,6 +3,8 @@ var DishDetailView = function (container,model) {
 	var ingredientsArray = model.getAllIngredients();
 	var priceTotal = 0;
 	var guests = model.getNumberOfGuests();
+	 container.find("#dishPic").html("<img src='" + 'images/' + model.getDish(1).image + "' alt='" + model.getDish(1).name + "'>");
+
 
 	container.find("#dishName span").html(model.getDish(1).name);
 	container.find("#prep span").html(model.getDish(1).description);

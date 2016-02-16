@@ -173,6 +173,21 @@ body {
 	top:40vh;
 }
 
+.dishPrepCont{
+	position: relative;
+	top:8vh;
+	width: 100%;
+	border: 2px solid black;
+	height: 40vh;
+}
+.prepCont{
+	position: relative;
+	height: 37vh;
+	width:80%;
+	padding-left:10%;
+	border: 2px solid red;
+}
+
 /* from marcus old index.css */
 .main {
 	position: absolute;
