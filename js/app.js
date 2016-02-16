@@ -12,5 +12,7 @@ $(function() {
 
 	//var selectView = new SelectView($("#index"), model);
 	var overviewView = new OverviewView($("#overview"), model);
+	var dishDetailView = new DishDetailView($("#dishdetails"),model);
+	var dishPrepView = new DishPrepView($("#preperation"),model);
 
 });
