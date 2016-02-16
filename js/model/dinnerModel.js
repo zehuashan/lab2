@@ -58,7 +58,7 @@ var DinnerModel = function () {
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
         var totalPrice = 0;
-        allIngredients = getAllIngredients();
+        allIngredients = this.getAllIngredients();
         for (key in allIngredients) {
             totalPrice += allIngredients[key].price;
         }
