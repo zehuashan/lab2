@@ -16,4 +16,12 @@ var SelectDishView = function (container,model) {
  container.find("#img3").html("<img src='" + 'images/' + model.getDish(3).image + "' alt='" + model.getDish(3).name + "'>");
  container.find("#img100").html("<img src='" + 'images/' + model.getDish(100).image + "' alt='" + model.getDish(100).name + "'>");
  container.find("#img200").html("<img src='" + 'images/' + model.getDish(200).image + "' alt='" + model.getDish(200).name + "'>");
+
+ var div = $("<div />", {
+ 	class: "ny",
+ 	id: "kaffe"
+ 
+ }).html("hel!");
+ console.log(div);
+
 }
