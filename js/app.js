@@ -3,16 +3,23 @@ $(function() {
 	var model = new DinnerModel();
 
 	//model.addDishToMenu()
-	
-	//And create the needed controllers and views
 
-	var selectDishView = new SelectDishView($("#selectDishView"), model);
-	//var view2 = new View2($("#view2"), model);
-	var view2 = new View2($("#container"), model);
+	var selectDishView = new SelectDishView($("#selectDish"), model);
+	var selectController = new SelectController(selectDishView, model);
 
-	//var selectView = new SelectView($("#index"), model);
+	var sidebar = new Sidebar($("#sidebar"), model);
+	var sidebarController = new SidebarController(sidebar, model);
+
 	var overviewView = new OverviewView($("#overview"), model);
-	var dishDetailView = new DishDetailView($("#dishdetails"),model);
-	var dishPrepView = new DishPrepView($("#preperation"),model);
+	var overviewController = new OverviewController(overviewView, model);
+
+	var dishDetailView = new DishDetailView($("#dishDet"),model);
+	var dishDetailController = new DishDetailController(dishDetailView, model);
+
+	var dishPrepView = new DishPrepView($("#dishPrev"),model);
+	var dishPrepController = new DishPrepController(dishPrepView, model);
+
+	var createDinnerView = new CreateDinnerView($("createDinner"), model)
+	var createDinnerController = new CreateDinnerController(createDinnerView, model);
 
 });

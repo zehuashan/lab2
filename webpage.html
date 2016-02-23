@@ -19,15 +19,17 @@
 			<div class="col-sm-9"><h1 class="topnav">HOMELETTE<small> From the best chefs in the world directly into your kitchen</small></div>
 		</div>
 	</nav>
-	<div class="createDinner"></div>
+	<div id="createDinner"></div>
 
-    <div class="sidebar"></div>
+    <div id="sidebar"></div>
 
-   	<div class="selectDish"></div>
+   	<div id="selectDish"></div>
 
-   	<div class="dishPrev"></div>
+   	<div id="dishDet"></div>
 
-   	<div class="overview"></div>
+   	<div id="dishPrev"></div>
+
+   	<div id="overview"></div>
     
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -36,7 +38,17 @@
 		<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
+	<script src="js/view/createDinnerView.js"></script>
+	<script src="js/view/DishDetailView.js"></script>
+	<script src="js/view/DishPrepView.js"></script>
+	<script src="js/view/OverviewView.js"></script>
+	<script src="js/view/selectDishView.js"></script>
+	<script src="js/view/sidebar.js"></script>
+	<script src="js/controller/createDinnerController.js"></script>
+	<script src="js/controller/selectController.js"></script>
+	<script src="js/controller/sidebarController.js"></script>
+	<script src="js/controller/dishDetailController.js"></script>
+	<script src="js/controller/dishPrevController.js"></script>
+	<script src="js/controller/overviewController.js"></script>
 </body>
 </html>

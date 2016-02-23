@@ -3,6 +3,12 @@ var DinnerModel = function () {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 3;
+	var observers = [];
+	var notifyObservers = function(arg) {
+		for(var i=0; i<observers.length; i++) {
+			observers[i].update(arg);
+		}	
+	}
 	var menu = [{
 		'id':1,
 		'name':'French toast',
@@ -71,6 +77,10 @@ var DinnerModel = function () {
 			}]
 		}];
 
+	this.addObserver = function(observer) {
+		observers.push(observer);
+	}
+
     this.plusGuest = function () {
         numberOfGuests = numberOfGuests + 1;
     }
@@ -83,6 +93,7 @@ var DinnerModel = function () {
 		//TODO Lab 2
 		if (num > 0) {
 		numberOfGuests = num;
+		notifyObservers();
 		}
 	}
 
@@ -460,5 +471,4 @@ var DinnerModel = function () {
 			}]
 		}
 	];
-
 }
