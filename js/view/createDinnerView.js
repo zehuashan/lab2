@@ -7,6 +7,8 @@ var CreateDinnerView = function (container,model) {
 		str += '<button type="button" id="createButton" class="btn btn-warning">Create new dinner</button></div>"';
 
 	$("#createDinner").append(str);
+    
+    this.createButton = container.find("#createButton");
 
 	model.addObserver(this)
 }

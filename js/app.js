@@ -3,6 +3,8 @@ $(function() {
 	var model = new DinnerModel();
 
 	//model.addDishToMenu()
+    var createDinnerView = new CreateDinnerView($("createDinner"), model)
+	var createDinnerController = new CreateDinnerController(createDinnerView, model);
 
 	var selectDishView = new SelectDishView($("#selectDish"), model);
 	var selectController = new SelectController(selectDishView, model);
@@ -19,7 +21,6 @@ $(function() {
 	var dishPrepView = new DishPrepView($("#dishPrev"),model);
 	var dishPrepController = new DishPrepController(dishPrepView, model);
 
-	var createDinnerView = new CreateDinnerView($("createDinner"), model)
-	var createDinnerController = new CreateDinnerController(createDinnerView, model);
+
 
 });

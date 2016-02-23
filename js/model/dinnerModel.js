@@ -4,11 +4,7 @@ var DinnerModel = function () {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 3;
 	var observers = [];
-	var notifyObservers = function(arg) {
-		for(var i=0; i<observers.length; i++) {
-			observers[i].update(arg);
-		}	
-	}
+	
 	var menu = [{
 		'id':1,
 		'name':'French toast',
@@ -76,6 +72,12 @@ var DinnerModel = function () {
 			'price':6
 			}]
 		}];
+    
+    this.notifyObservers = function(arg) {
+		for(var i=0; i<observers.length; i++) {
+			observers[i].update(arg);
+		}	
+	}
 
 	this.addObserver = function(observer) {
 		observers.push(observer);
@@ -93,8 +95,8 @@ var DinnerModel = function () {
 		//TODO Lab 2
 		if (num > 0) {
 		numberOfGuests = num;
-		notifyObservers();
 		}
+        this.notifyObservers();
 	}
 
 	// should return 

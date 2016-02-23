@@ -1,7 +1,9 @@
-var CreateDinnerController = function(view, model ) {
+var CreateDinnerController = function (view, model) {
  	
- 	view.createButton.onClick(function() {
- 		view.createDinnerView.hide();
- 		SelectDishView.selectDishView.show();
- 	}) 
+	view.createButton.click(function () {
+        console.log("I'm in the controller");
+		//view.createDinnerView.hide();
+        //Sidebar.sidebar.show();
+		//SelectDishView.selectDishView.show();
+	});
 }
