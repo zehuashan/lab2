@@ -139,15 +139,7 @@ body {
 	width:100%;
 	height:5vh;
 }
-.rightcont{
-	position: absolute;
-	width:80%;
-    left:20%;
-	top:16vh;
-	height:80vh;
-	border: 2px solid black;
-	background:rgba(255,255,255,1);
-}
+
 
 .leftcontlefttext{
 	margin-top: 10%;
@@ -158,6 +150,15 @@ body {
 	margin-top: 17%;
 	font-weight: 900;
 	float:right;
+}
+.rightcont{
+	position: absolute;
+	width:80%;
+    left:20%;
+	top:16vh;
+	height:80vh;
+	border: 2px solid black;
+	background:rgba(255,255,255,1);
 }
 
 .rightcont1{
@@ -207,6 +208,45 @@ width:33%;
 left:52%;
 
 }
+/* for dish selection */
+.sName{
+	font-weight: bold;
+}
+#selectDish{
+	position: absolute;
+	width:80%;
+    left:20%;
+	top:16vh;
+	height:80vh;
+	border: 2px solid black;
+	background:rgba(255,255,255,1);
+}
+
+.selectdishbar{
+position:relative;
+width:100%;
+border-style: solid;
+border-width: 2px;
+height: 13vh;
+background-color: rgba(255, 222, 87, 1);
+}
+#dishcontent{
+position:relative;
+width:100%;
+top:20;
+height: 84%;
+border-style: solid;
+border-width: 2px;
+overflow:auto;
+padding:2%;
+}
+.selects{
+position:relative;
+height:10vh;
+width: 30%;	
+border-style: solid;
+border-width: 2px;
+}
 
 /* from marcus old index.css */
 .main {
@@ -216,11 +256,6 @@ left:52%;
 	height: 80vh;
 	width: 80%;
 	left: 20%;
-}
-
-.selectdish {
-	position: relative;
-	left: 3%;
 }
 
 .form-inline {

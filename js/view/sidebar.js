@@ -34,10 +34,6 @@ var Sidebar = function (container,model) {
 	
    	model.addObserver(this);
 	
-	
-	
-	
-	
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
 			this.numberOfGuests.html(model.getNumberOfGuests());
