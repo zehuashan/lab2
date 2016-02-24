@@ -64,26 +64,36 @@ body {
 	top:2vh;
 	background:rgba(255,165,0,1);
 }
-.menuview{
+#menuview{
 	position: absolute;
-	top:16vh;
-	height: 80vh;
+	top:40vh;
+	height: 30vh;
 	width:100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
+#menuviewinner{
+	position: relative;
+	height: 5vh;
+	width:66%;
+	margin: 0 auto;
+}
+
 .menuviewitem{
-	position:relative;
-	text-align: right; 
-	top:27vh; 
+	position:absolute;
 	color: #A91C1C;
+	top:20vh;
 }
 .totalcost{
 	position:relative;
-	top:44vh; 
+	top:39vh;
+	left:80%;
 	color: #A91C1C; 
 }
 .totallabel{
 	position:relative;
-	top:44vh; 
+	left:80%;
+	top:40vh; 
 }
 .menuviewpic{
 	position:relative;
