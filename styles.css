@@ -123,6 +123,10 @@ body {
 .leftdiv3{
 	position: relative;
 	width:100%;
+}
+.leftdivitem{
+	position: relative;
+	width:100%;
 	height:5vh;
 }
 .leftdiv4{
