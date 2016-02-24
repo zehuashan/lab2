@@ -6,4 +6,7 @@ var CreateDinnerView = function (container,model) {
     //console.log(this.createButton);
 
 	model.addObserver(this)
+	this.update = function(arg){
+
+	}
 }

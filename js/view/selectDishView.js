@@ -18,6 +18,9 @@ var SelectDishView = function (container,model) {
     }
     selectDishes('starter');
     model.addObserver(this);
+	this.update = function(arg){
+
+	}
 }
 
 /*<div class="rightcont">

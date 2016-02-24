@@ -32,4 +32,7 @@
 	
 	//Make this an observer
 	model.addObserver(this);
+	this.update = function(arg){
+
+	}
 }  

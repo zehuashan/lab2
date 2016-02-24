@@ -3,19 +3,17 @@ var Sidebar = function (container,model) {
  	
  	this.container = container;
     this.numberOfGuests = container.find("#numberOfGuests");
-	//this.numberOfGuests = container.find(".numberOfGuests2");
-	//this.plusButton = container.find("#plusGuest");
-	//this.minusButton = container.find("#minusGuest");
+	this.totalPrice = container.find("#totPrice span");
 	
 	this.plusButton = $("#plusGuest");
 	this.minusButton = $("#minusGuest");
 	this.numberOfGuests.html(model.getNumberOfGuests());
-	container.find("#totPrice span").html(model.getTotalMenuPrice());
+	this.totalPrice.html(model.getTotalMenuPrice());
 
 	var priceToHtml = function() {   
-        var menuList = model.getFullMenu();
-        var pending = "";
-        var toHtml = "";
+    this.menuList = model.getFullMenu();
+    var pending = "";
+    var toHtml = "";
        if(menuList.length==0){
         	pending = "pending"
         } else {
@@ -31,8 +29,21 @@ var Sidebar = function (container,model) {
             $("#leftdiv3").append(toHtml);
         }
     }
-priceToHtml();
-    
-    model.addObserver(this);
-}
+	priceToHtml();
+	
+   	model.addObserver(this);
+	//This function gets called when there is a change at the model
+		this.update = function(arg){
+			this.numberOfGuests.html(model.getNumberOfGuests());
+			this.totalPrice.html(model.getTotalMenuPrice());
+
+		}
+		for(var i = 0; i < menuList.length; i++) {
+				menuList[i].name;
+				getDishPrice(menuList[i].id); 
+
+        }
+	
+	}
+
 

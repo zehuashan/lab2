@@ -3,7 +3,7 @@ var DinnerModel = function () {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 4;
-	var observers = [];
+	this.observers = [];
 	
 	var menu = [{
 		'id':1,
@@ -72,33 +72,28 @@ var DinnerModel = function () {
 			'price':6
 			}]
 		}];
-    
-    this.notifyObservers = function(arg) {
-		for(var i=0; i<observers.length; i++) {
-			observers[i].update(arg);
+
+    this.notifyObservers = function(obj) {
+		for(var i=0; i<this.observers.length; i++) {
+			console.log(this.observers[i]);
+			 if(obj) {
+                this.observers[i].update(obj);
+            } else {
+                this.observers[i].update();
+            }
 		}	
 	}
 
 	this.addObserver = function(observer) {
-		observers.push(observer);
+		this.observers.push(observer);
 	}
-
-
-    this.plusGuest = function () {
-        numberOfGuests = numberOfGuests + 1;
-    }
-    
-    this.minusGuest = function () {
-        numberOfGuests = numberOfGuests - 1;
-    }
 
 	this.setNumberOfGuests = function (num) {
 		//TODO Lab 2
 		if (num > 0) {
 		numberOfGuests = num;
-		notifyObservers();
+		this.notifyObservers();
 		}
-        this.notifyObservers();
 	}
 
 	// should return 
