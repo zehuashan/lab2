@@ -4,20 +4,19 @@ var Sidebar = function (container,model) {
  	this.container = container;
     this.numberOfGuests = container.find("#numberOfGuests");
 	//this.numberOfGuests = container.find(".numberOfGuests2");
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
+	//this.plusButton = container.find("#plusGuest");
+	//this.minusButton = container.find("#minusGuest");
 	
+	this.plusButton = $("#plusGuest");
+	this.minusButton = $("#minusGuest");
 	this.numberOfGuests.html(model.getNumberOfGuests());
-
-	this.totalMenuPrice = container.find("#totalMenuPrice");
-
-	this.totalMenuPrice.html(model.getTotalMenuPrice());
+	container.find("#totPrice span").html(model.getTotalMenuPrice());
 
 	var priceToHtml = function() {   
         var menuList = model.getFullMenu();
         var pending = "";
         var toHtml = "";
-        if(menuList.empty()){
+       if(menuList.length==0){
         	pending = "pending"
         } else {
         	pending = model.getFullMenu();
@@ -32,7 +31,7 @@ var Sidebar = function (container,model) {
             $("#leftdiv3").append(toHtml);
         }
     }
-    priceToHtml();
+priceToHtml();
     
     model.addObserver(this);
 }
