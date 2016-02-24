@@ -99,7 +99,7 @@ body {
 	position: absolute;
 	left:30%;
 }
-.leftcont{
+#sidebar{
 	position: absolute;
 	width:20%;
 	top:16vh;
