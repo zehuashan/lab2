@@ -21,7 +21,8 @@ var Sidebar = function (container,model) {
         }
      
         for(var i = 0; i < menuList.length; i++) {
-            toHtml = '<div class="leftdivitem">';
+            toHtml = '<div class="leftdivitem" title="Click to remove dish.">';
+			toHtml += '<div class="hvr-back-pulse">';
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].name + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
          	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i].id); + 'kr</p></div></div>';
@@ -32,6 +33,11 @@ var Sidebar = function (container,model) {
 	priceToHtml();
 	
    	model.addObserver(this);
+	
+	
+	
+	
+	
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
 			this.numberOfGuests.html(model.getNumberOfGuests());
@@ -39,7 +45,8 @@ var Sidebar = function (container,model) {
 			$("#leftdiv3").empty();
 		
 			for(var i = 0; i < menuList.length; i++) {
-            toHtml = '<div class="leftdivitem">';
+            toHtml = '<div class="leftdivitem" title="Click to remove dish.">';
+			toHtml += '<div class="hvr-back-pulse">';
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].name + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
          	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i].id); + 'kr</p></div></div>';
