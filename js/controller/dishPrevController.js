@@ -1,3 +1,3 @@
-var DishPrepController = function(view, model ) {
+var DishPrepController = function(view, model, masterController) {
 
 }

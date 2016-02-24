@@ -1,3 +1,3 @@
-var DishDetailController = function(view, model ) {
+var DishDetailController = function(view, model, masterController) {
 
 }

@@ -41,35 +41,4 @@ var SelectDishView = function (container,model) {
                             <option>Dessert</option>
                         </select>
                     </div>
-
-                    <hr id="line2">
-
-                    <div class="row-fluid" id="rowimg">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2" id="img1"></div>
-                        <div class="col-md-2" id="img2"></div>
-                        <div class="col-md-2" id="img3"></div>
-                        <div class="col-md-2" id="img100"></div>
-                        <div class="col-md-2" id="img200"></div>
-                        <div class="col-md-1"></div>
-                    </div>
-                    <div class="row-fluid" id="rowtext">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2" id="dish1"></div>
-                        <div class="col-md-2" id="dish2"></div>
-                        <div class="col-md-2" id="dish3"></div>
-                        <div class="col-md-2" id="dish100"></div>
-                        <div class="col-md-2" id="dish200"></div>
-                        <div class="col-md-1"></div>
-                    </div>
-                    <div class="row-fluid" id="rowPar">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2" id="para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex dui, bibendum nec dui eu, elementum feugiat nibh. Duis lectus lorem, interdum ac tellus eu, gravida commodo ipsum. </div>
-                        <div class="col-md-2" id="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex dui, bibendum nec dui eu, elementum feugiat nibh. Duis lectus lorem, interdum ac tellus eu, gravida commodo ipsum. </div>
-                        <div class="col-md-2" id="para3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex dui, bibendum nec dui eu, elementum feugiat nibh. Duis lectus lorem, interdum ac tellus eu, gravida commodo ipsum. </div>
-                        <div class="col-md-2" id="para100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex dui, bibendum nec dui eu, elementum feugiat nibh. Duis lectus lorem, interdum ac tellus eu, gravida commodo ipsum. </div>
-                        <div class="col-md-2" id="para200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex dui, bibendum nec dui eu, elementum feugiat nibh. Duis lectus lorem, interdum ac tellus eu, gravida commodo ipsum.</div>
-                        <div class="col-md-1"></div>
-                    </div>
-                </div>
-                </div> */
+*/

@@ -1,3 +1,3 @@
-var OverviewController = function(view, model ) {
+var OverviewController = function(view, model, masterController) {
 
 }
