@@ -11,7 +11,6 @@ $(function() {
 
 	var sidebar = new Sidebar($("#sidebar"), model);
 	var sidebarController = new SidebarController(sidebar, model);
-
 	var overviewView = new OverviewView($("#overview"), model);
 	var overviewController = new OverviewController(overviewView, model);
 

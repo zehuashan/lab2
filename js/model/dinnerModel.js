@@ -95,6 +95,7 @@ var DinnerModel = function () {
 		//TODO Lab 2
 		if (num > 0) {
 		numberOfGuests = num;
+		notifyObservers();
 		}
         this.notifyObservers();
 	}
