@@ -1,5 +1,7 @@
 
 var SelectDishView = function (container,model) {
+
+	this.container = container;
  
     var selectDishes = function(type) {   
         var dishes = model.getAllDishes(type);

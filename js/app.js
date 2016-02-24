@@ -2,7 +2,7 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 
-	var createDinnerView = new CreateDinnerView($("createDinner"), model)
+	var createDinnerView = new CreateDinnerView($("#createDinner"), model)
 	var selectDishView = new SelectDishView($("#selectDish"), model);
 	var sidebar = new Sidebar($("#sidebar"), model);
 	var overviewView = new OverviewView($("#overview"), model);
@@ -18,5 +18,7 @@ $(function() {
 	var overviewController = new OverviewController(overviewView, model,masterController);
 	var dishDetailController = new DishDetailController(dishDetailView, model,masterController);
 	var dishPrepController = new DishPrepController(dishPrepView, model,masterController);
+
+	masterController.showStart();
 
 });

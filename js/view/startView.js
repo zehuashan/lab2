@@ -14,6 +14,7 @@
 
     
  var startView = function(container, model) {
+ 	this.container = container;
 	
 	//Create the initial home page
 	$("body").addClass("index");

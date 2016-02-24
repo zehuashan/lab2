@@ -1,6 +1,7 @@
 //ExampleView Object constructor
 var Sidebar = function (container,model) {
- 
+ 	
+ 	this.container = container;
     this.numberOfGuests = container.find(".numberOfGuests");
 	//this.numberOfGuests = container.find(".numberOfGuests2");
 	this.plusButton = container.find("#plusGuest");

@@ -6,8 +6,6 @@ var CreateDinnerController = function (view, model, masterController) {
  	//	console.log("test4");
  	//})
 	view.createButton.click(function () {
-        console.log("test3");
-        masterController.hideAll();
-        masterController.showSelect();
+        masterController.showSelect()
 	});
 }

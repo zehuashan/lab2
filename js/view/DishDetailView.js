@@ -1,5 +1,7 @@
 //ExampleView Object constructor56
 var DishDetailView = function (container,model) {
+
+	this.container = container;
 	var ingredientsArray = model.getAllIngredients();
 	var priceTotal = 0;
 	var guests = model.getNumberOfGuests();

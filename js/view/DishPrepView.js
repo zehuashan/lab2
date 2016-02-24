@@ -1,5 +1,7 @@
 //ExampleView Object constructor56
 var DishPrepView = function (container,model) {
+
+	this.container = container;
 	container.find(".statustext span").html(model.getNumberOfGuests());
 	container.find("#dishName span").html(model.getDish(1).name);
 	container.find("#prep span").html(model.getDish(1).description);

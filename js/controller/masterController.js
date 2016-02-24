@@ -1,17 +1,21 @@
 var MasterController = function(views, model) {
  	
+
 	this.hideAll = function() {
-		$("#createDinner").hide();
-		$("#sidebar").hide();
-		$("#selectDish").hide();
-		$("#dishDet").hide();
-		$("#dishPrev").hide();
-		$("#overview").hide();
+		for(var i = 0; i < views.length; i++) {
+			views[i].container.hide();
+			console.log(views[i].container);
+		}
+	}
+
+
+	this.showStart = function () {
+		this.hideAll();
+		views[0].container.show();
 	}
 
 	this.showSelect = function () {
 		this.hideAll();
-		views[2]
-		views[1].show();
+		views[1].container.show();
 	}
 }

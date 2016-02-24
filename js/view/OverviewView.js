@@ -1,6 +1,8 @@
 //ExampleView Object constructor56
 var OverviewView = function (container,model) {
 
+
+	this.container = container;	
 	container.find(".statustext span").html(model.getNumberOfGuests());
 	container.find("#menu1 span").html(model.getDishPrice(1));
 	container.find("#menu101 span").html(model.getDishPrice(101));
