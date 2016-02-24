@@ -7,7 +7,7 @@ $(function() {
 	var sidebar = new Sidebar($("#sidebar"), model);
 	var overviewView = new OverviewView($("#overview"), model);
 	var dishDetailView = new DishDetailView($("#dishDet"),model);
-	var dishPrepView = new DishPrepView($("#dishPrev"),model);
+	var dishPrepView = new DishPrepView($("#dishPrep"),model);
 	
 	var views = [createDinnerView, sidebar ,selectDishView, dishDetailView , overviewView, dishPrepView];
 

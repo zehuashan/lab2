@@ -2,6 +2,7 @@
 var OverviewView = function (container,model) {
 	this.container = container;
 	this.backButton = $("#back1");
+	this.goToPrep = $("#goToPrep");
 	this.numberOfGuests = container.find(".statustext span");
 	this.totalPrice = container.find("#totPrice span");
 	this.numberOfGuests.html(model.getNumberOfGuests());

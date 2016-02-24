@@ -4,7 +4,6 @@ var SidebarController = function(view, model, masterController) {
    masterController.showOverview();
 });
 	
-	
  $("#numberOfGuests").change(function() {
     model.setNumberOfGuests(view.getNumberOfGuests()); 
  });
