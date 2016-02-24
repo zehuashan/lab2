@@ -1,5 +1,10 @@
 var SidebarController = function(view, model, masterController) {
  
+ view.confirmBtn.click(function () {
+   masterController.showOverview();
+});
+	
+	
  $("#numberOfGuests").change(function() {
     model.setNumberOfGuests(view.getNumberOfGuests()); 
  });

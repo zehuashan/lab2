@@ -9,7 +9,7 @@ $(function() {
 	var dishDetailView = new DishDetailView($("#dishDet"),model);
 	var dishPrepView = new DishPrepView($("#dishPrev"),model);
 	
-	var views = [createDinnerView, selectDishView, sidebar, overviewView, dishDetailView, dishPrepView];
+	var views = [createDinnerView, sidebar ,selectDishView, dishDetailView , overviewView, dishPrepView];
 
 	var masterController = new MasterController(views, model)
 	var createDinnerController = new CreateDinnerController(createDinnerView, model,masterController);

@@ -2,11 +2,10 @@
 var SelectDishView = function (container,model) {
 
 	this.container = container;
- 
+
     var selectDishes = function(type) {   
         var dishes = model.getAllDishes(type);
-        var toHtml = "";
-     
+        var toHtml = "";    
         for(var i = 0; i < dishes.length; i++) {
             toHtml = '<div class="col-md-3" id="' + dishes[i].id + '">';
             toHtml += '<div class="sImg"><img src="images/' + dishes[i].image + '" alt="' + dishes[i].name + '"></img>';
@@ -15,10 +14,11 @@ var SelectDishView = function (container,model) {
             $("#dishcontent").append(toHtml);
         }
     }
-    selectDishes('all');
     model.addObserver(this);
-	this.update = function(arg){
+	selectDishes('all');
 	
+	this.update = function(arg){
+		
 	}
 }
 

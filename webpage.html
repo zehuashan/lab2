@@ -72,11 +72,11 @@
         </div>
 
         <div class="col-md-3">
-            <select class="form-control">
-				<option>All</option>
-                <option>Starter</option>
-                <option>Main</option>
-                <option>Dessert</option>
+            <select class="form-control" id="dishform">
+				<option value="0">All</option>
+                <option value="1">Starter</option>
+                <option value="2">Main</option>
+                <option value="3">Dessert</option>
             </select>
         </div>
 		</div>
@@ -92,7 +92,14 @@
 
    	<div id="dishPrev"></div>
 
-   	<div id="overview"></div>
+   	<div id="overview">
+		<div class="statusbar"> 
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h1 class="statustext" id="numberOfGuests"> My Dinner: <span>3</span> People</h1></div>
+ 	<div class="col-md-1" id="back1"><button type="button" class="btn btn-secondary">Go back and edit dinner</button></div>
+		</div>
+	</div>
     
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

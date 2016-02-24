@@ -75,7 +75,7 @@ var DinnerModel = function () {
 
     this.notifyObservers = function(obj) {
 		for(var i=0; i<this.observers.length; i++) {
-			console.log(this.observers[i]);
+			//console.log(this.observers[i]);
 			 if(obj) {
                 this.observers[i].update(obj);
             } else {
