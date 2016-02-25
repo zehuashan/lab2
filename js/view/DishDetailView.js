@@ -7,6 +7,7 @@ var DishDetailView = function (container,model) {
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.ingTotPrice = container.find(".ingpricetot span");
 	var totalPrice = 0;
+    this.confirmButton = container.find("#confirmButton")
 	
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
     
@@ -53,7 +54,7 @@ var DishDetailView = function (container,model) {
 	//This function gets called when there is a change at the model
 	this.update = function(arg){
 		totalPrice = 0;
-		dishId = parseInt(model.giveId());
+        dishId = parseInt(model.giveId());
 		this.numberOfGuests.html(model.getNumberOfGuests());
 		$("#ingredientsTable").empty();
 		$("#dishDetailText").empty();
