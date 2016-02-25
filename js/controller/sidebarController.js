@@ -4,9 +4,9 @@ var SidebarController = function(view, model, masterController) {
    masterController.showOverview();
 });
 
- view.removeItemFromMenu.click(function () {
-   model.removeDishFromMenu(101);
-});
+// view.removeItemFromMenu.click(function () {
+//   model.removeDishFromMenu(101);
+//});
 	
  $("#numberOfGuests").change(function() {
     model.setNumberOfGuests(view.getNumberOfGuests()); 

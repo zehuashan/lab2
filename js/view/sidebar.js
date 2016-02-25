@@ -10,7 +10,7 @@ var Sidebar = function (container,model) {
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice()); 
     this.confirmBtn = $(".confirmbtn");
-	this.removeItemFromMenu = $("#101");
+	//this.removeItemFromMenu = $("#101");
 
 	var priceToHtml = function() {   
     this.menuList = model.getFullMenu();

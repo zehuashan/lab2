@@ -8,11 +8,5 @@ var SelectController = function(view, model, masterController) {
         
         masterController.showDetail();
     });
-    
-    view.testbtn.click(function () {
-        masterController.showDetail();
-    });
-    
-
 
 }
