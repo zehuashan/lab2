@@ -26,7 +26,6 @@ var Sidebar = function (container,model) {
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].name + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
          	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i].id); + 'kr</p></div></div>';
-
             $("#leftdiv3").append(toHtml);
         }
     }

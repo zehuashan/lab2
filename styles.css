@@ -161,7 +161,7 @@ body {
 	font-weight: 900;
 	float:right;
 }
-.rightcont{
+#rightcont{
 	position: absolute;
 	width:80%;
     left:20%;
@@ -169,14 +169,15 @@ body {
 	height:80vh;
 	border: 2px solid black;
 	background:rgba(255,255,255,1);
+	overflow:auto;
 }
 
-.rightcont1{
+#rightcont1{
 	position: relative;
-	height:50vh;
+	height:40vh;
 	width: 50%;
 }
-.rightcont2{
+#rightcont2{
 	position: absolute;
 	border: 2px solid black;
 	height:35vh;
@@ -184,8 +185,11 @@ body {
 	right:0px;
 	top:0px;
 }
-.rightcont3{
-	top:40vh;
+#rightcont3{
+	position:absolute;
+	left:1%;
+	width:80%;
+	top:42vh;
 }
 
 .dishPrepCont{
@@ -273,6 +277,23 @@ border-width: 2px;
 	left: 5%;
 }
 
+.ingline{
+	width: 85%;
+	margin-left:5%;
+	margin-right:5%;
+	border:1px solid #000;
+}
+#ingredientsTable{
+	height:20vh;
+}
+.ingline1{
+	top:21vh;
+	width: 85%;
+	margin-left:5%;
+	margin-right:5%;
+	border:1px solid #000;
+}
+
 #line2 {
 	border: 1px solid #000;
 	position: absolute;
@@ -343,4 +364,20 @@ border-width: 2px;
   background-color: #FF0000;
   color: white;
 }
+
+.ingpricetot{
+	position:absolute;
+	font-weight: bold;
+	top:2vh;
+}
+
+#boldpos{
+	position:absolute;
+	font-weight: bold;
+	top:2vh;
+}
+#leftpad{
+	padding-left:2%;
+}
+
 
