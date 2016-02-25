@@ -1,8 +1,18 @@
 var SelectController = function(view, model, masterController) {
  
  
- view.testbtn.click(function () {
-   masterController.showDetail();
-});
+    view.sImg.click(function() {
+        
+        console.log(model.giveId());
+        model.trackId(this.id);
+        
+        masterController.showDetail();
+    });
+    
+    view.testbtn.click(function () {
+        masterController.showDetail();
+    });
+    
+
 
 }

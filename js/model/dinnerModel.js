@@ -4,6 +4,16 @@ var DinnerModel = function () {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 4;
 	this.observers = [];
+    var savedDish = 200;
+    
+    this.trackId = function(id) {
+        savedDish = id;
+        this.notifyObservers();
+    }
+    
+    this.giveId = function() {
+        return savedDish;
+    }
 	
 	var menu = [{
 		'id':1,
@@ -58,18 +68,6 @@ var DinnerModel = function () {
 			'quantity':10,
 			'unit':'ml',
 			'price':4
-			}]
-		},{
-		'id':200,
-		'name':'Chocolat Ice cream',
-		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
-			'name':'ice cream',
-			'quantity':100,
-			'unit':'ml',
-			'price':6
 			}]
 		}];
 

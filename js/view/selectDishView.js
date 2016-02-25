@@ -8,15 +8,18 @@ var SelectDishView = function (container,model) {
         var dishes = model.getAllDishes(type);
         var toHtml = "";    
         for(var i = 0; i < dishes.length; i++) {
-            toHtml = '<div class="col-md-3" id="' + dishes[i].id + '">';
+            toHtml = '<a><div class="col-md-3" id="' + dishes[i].id + '">';
             toHtml += '<div class="sImg"><img src="images/' + dishes[i].image + '" alt="' + dishes[i].name + '"></img>';
             toHtml += '<div class="sName">' + dishes[i].name + '</div>';
-            toHtml += '<div class="sDisc">' + dishes[i].description + '</div> </div>';
+            toHtml += '<div class="sDisc">' + dishes[i].description + '</div> </div></a>';
             $("#dishcontent").append(toHtml);
         }
     }
+    
+    
     model.addObserver(this);
-	selectDishes('all');
+	selectDishes('dessert');
+    this.sImg = $(".col-md-3");
 	
 	this.update = function(arg){
 		
