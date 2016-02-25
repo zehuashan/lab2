@@ -11,7 +11,6 @@ var DishDetailView = function (container,model) {
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
     
 	var dishId = parseInt(model.giveId());
-	
 	var printIngridients = function(id){
 		var toHtml = "";
 		var ingredientsArray = model.getDish(id).ingredients;
@@ -47,7 +46,6 @@ var DishDetailView = function (container,model) {
 	printIngridients(dishId);
 	printDishInfo(dishId);
 	model.addObserver(this);
-	console.log(totalPrice);
 	this.ingTotPrice.html(totalPrice);
 	
 	
@@ -55,6 +53,7 @@ var DishDetailView = function (container,model) {
 	//This function gets called when there is a change at the model
 	this.update = function(arg){
 		totalPrice = 0;
+		dishId = parseInt(model.giveId());
 		this.numberOfGuests.html(model.getNumberOfGuests());
 		$("#ingredientsTable").empty();
 		$("#dishDetailText").empty();
@@ -62,7 +61,6 @@ var DishDetailView = function (container,model) {
 		printIngridients(dishId);
 		printDishInfo(dishId);
 		this.ingTotPrice.html(totalPrice);
-		model.giveId();
 	}
 	
 	

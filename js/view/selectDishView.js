@@ -2,7 +2,6 @@
 var SelectDishView = function (container,model) {
 
 	this.container = container;
-	this.testbtn = $("#testbtn");
 
     var selectDishes = function(type) {   
         var dishes = model.getAllDishes(type);
@@ -18,7 +17,7 @@ var SelectDishView = function (container,model) {
     
     
     model.addObserver(this);
-	selectDishes('dessert');
+	selectDishes('all');
     this.sImg = $(".col-md-3");
 	
 	this.update = function(arg){
