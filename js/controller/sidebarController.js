@@ -3,6 +3,10 @@ var SidebarController = function(view, model, masterController) {
  view.confirmBtn.click(function () {
    masterController.showOverview();
 });
+
+ view.removeItemFromMenu.click(function () {
+   model.removeDishFromMenu(101);
+});
 	
  $("#numberOfGuests").change(function() {
     model.setNumberOfGuests(view.getNumberOfGuests()); 

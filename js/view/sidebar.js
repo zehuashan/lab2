@@ -10,6 +10,7 @@ var Sidebar = function (container,model) {
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice()); 
     this.confirmBtn = $(".confirmbtn");
+	this.removeItemFromMenu = $("#101");
 
 	var priceToHtml = function() {   
     this.menuList = model.getFullMenu();
@@ -21,7 +22,7 @@ var Sidebar = function (container,model) {
         	pending = model.getFullMenu();
         }
         for(var i = 0; i < menuList.length; i++) {
-            toHtml = '<div class="leftdivitem" title="Click to remove dish.">';
+            toHtml = '<div class="leftdivitem" id="'+ menuList[i].id  +'" title="Click to remove dish.">';
 			toHtml += '<div class="hvr-back-pulse">';
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].name + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
@@ -30,9 +31,7 @@ var Sidebar = function (container,model) {
         }
     }
 	priceToHtml();
-	
-   	model.addObserver(this);
-	
+	model.addObserver(this);
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
 			this.numberOfGuests.html(model.getNumberOfGuests());
