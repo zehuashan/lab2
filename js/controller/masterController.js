@@ -24,6 +24,13 @@ var MasterController = function(views, model) {
 		this.hideAll();
 		views[4].container.show();
 	}
+	
+	this.showDetail = function () {
+		this.hideAll();
+		views[1].container.show();
+		views[3].container.show();
+	}
+	
 	this.showPrep = function () {
 		this.hideAll();
 		views[5].container.show();

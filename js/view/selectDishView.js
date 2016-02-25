@@ -2,6 +2,7 @@
 var SelectDishView = function (container,model) {
 
 	this.container = container;
+	this.testbtn = $("#testbtn");
 
     var selectDishes = function(type) {   
         var dishes = model.getAllDishes(type);
