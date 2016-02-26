@@ -392,3 +392,17 @@ border-width: 2px;
     height: 100px;
     background: #0000ff;
 }
+
+.sImg {
+	position: relative;
+    left:25%;
+}
+
+.sDisc{
+	position: relative;
+	width:50%;
+}
+
+.all{
+	padding-bottom: 50px;
+}
