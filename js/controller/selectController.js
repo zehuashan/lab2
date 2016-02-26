@@ -6,15 +6,13 @@ var SelectController = function(view, model, masterController) {
 
     $("#Searchhere2").keyup(function () {
         var filter = $(this).val();
-        var type = $(this).find('option:selected').text().toLowerCase();
+        var type = $("select").find('option:selected').text().toLowerCase();
         $(".col-md-3").each(function() {
+        	var data = $(this).find('h5').text();
         	$(this).hide();
-        	if ($(this).text().search(new RegExp(filter, "i")) >= 0) {
+        	if (data.search(new RegExp(filter, "i")) >= 0 && $(this).hasClass(type)) {
                 $(this).show();
             };
-            if($(this).hasClass(type)){
-        		$(this).show();
-        	}
     });
     });
     

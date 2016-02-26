@@ -5,7 +5,6 @@ var SidebarController = function(view, model, masterController) {
 });
 
  $("#leftdiv3").on("click", ".removeButton", function () {
-    
     model.removeDishFromMenu(this.id);
  });
 	
