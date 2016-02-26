@@ -7,7 +7,7 @@ var SelectDishView = function (container,model) {
         var dishes = model.getAllDishes(type);
         var toHtml = "";    
         for(var i = 0; i < dishes.length; i++) {
-            toHtml = '<a id="' + dishes[i].id +'"><div class="' + dishes[i].type + '"><div class="col-md-3" id="' + dishes[i].id + '">';
+            toHtml = '<a id="'+ dishes[i].type +'"><div><div class="col-md-3" id="' + dishes[i].id + '">';
             toHtml += '<div class="sImg"><img src="images/' + dishes[i].image + '" alt="' + dishes[i].name + '"></img>';
             toHtml += '<div class="sName">' + dishes[i].name + '</div></a>';
             toHtml += '<div class="sDisc">' + dishes[i].description + '</div> </div>';

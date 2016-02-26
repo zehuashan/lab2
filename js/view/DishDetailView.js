@@ -39,13 +39,6 @@ var DishDetailView = function (container,model) {
 	}
 	
 	
-	
-	
-	
-	
-	
-	printIngridients(dishId);
-	printDishInfo(dishId);
 	model.addObserver(this);
 	this.ingTotPrice.html(totalPrice);
 	
