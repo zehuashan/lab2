@@ -156,10 +156,10 @@ var DinnerModel = function () {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2
-        var dish = getDish(id);
+        var dish = this.getDish(id);
         for(key in menu) {
         	if(menu[key].type == dish.type) {
-        		removeDishFromMenu(menu[key].id);
+        		this.removeDishFromMenu(menu[key].id);
         	}
         }
         menu.push(dish);

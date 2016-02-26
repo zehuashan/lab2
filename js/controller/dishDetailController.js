@@ -4,7 +4,7 @@ var DishDetailController = function(view, model, masterController) {
     });
     
     view.confBut.click(function (id) {
-        console.log(model.getDish(model.giveId()));
+        //console.log(model.getDish(model.giveId()));
         model.addDishToMenu(model.giveId());
     });
     
