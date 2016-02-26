@@ -6,11 +6,15 @@ var SelectController = function(view, model, masterController) {
 
     $("#Searchhere2").keyup(function () {
         var filter = $(this).val();
+        var type = $(this).find('option:selected').text().toLowerCase();
         $(".col-md-3").each(function() {
-        	$(this).fadeOut();
+        	$(this).hide();
         	if ($(this).text().search(new RegExp(filter, "i")) >= 0) {
-                $(this).fadeIn();
+                $(this).show();
             };
+            if($(this).hasClass(type)){
+        		$(this).show();
+        	}
     });
     });
     
@@ -18,7 +22,7 @@ var SelectController = function(view, model, masterController) {
         var type = $(this).find('option:selected').text().toLowerCase();
         console.log(type);
 
-        $("a").each(function(){
+        $(".col-md-3").each(function(){
         	$(this).hide();
 
         	if($(this).hasClass(type)){

@@ -29,18 +29,20 @@ var Sidebar = function (container,model) {
             toHtml += '<div class="col-sm-2"></div>';
          	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i].id); + 'kr</p></div></div>';
             $("#leftdiv3").append(toHtml);
-            } else {
-                $("#leftdiv3").append("");
             }
         }
     }
+
 	priceToHtml();
+
 	model.addObserver(this);
+
     this.removeItemFromMenu = $(".leftdivitem");
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
 			this.numberOfGuests.html(model.getNumberOfGuests());
 			this.totalPrice.html(model.getTotalMenuPrice());
+			this.removeItemFromMenu = $(".leftdivitem");
 			$("#leftdiv3").empty();
 			priceToHtml();
 		}
