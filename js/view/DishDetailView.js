@@ -7,7 +7,7 @@ var DishDetailView = function (container,model) {
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.ingTotPrice = container.find(".ingpricetot span");
 	var totalPrice = 0;
-    this.confirmButton = container.find("#confirmButton")
+    this.confBut = container.find("#confBut")
 	
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
     

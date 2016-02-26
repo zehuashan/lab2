@@ -3,7 +3,9 @@ var DishDetailController = function(view, model, masterController) {
         masterController.showSelect();
     });
     
-    view.confirmButton.click(function () {
-        model.addDishToMenu(parseInt(model.giveId()));
+    view.confBut.click(function (id) {
+        console.log(model.getDish(model.giveId()));
+        model.addDishToMenu(model.giveId());
     });
+    
 }

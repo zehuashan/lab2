@@ -12,11 +12,15 @@ var OverviewView = function (container,model) {
 	var overviewToHtml= function(arg){        
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
+            if(menuList[i] != undefined) {
 			toHtml = '<div class="col-md-4" id="' + menuList[i].id + '">';
             toHtml += '<div class="sImg"><img src="images/' + menuList[i].image + '" alt="' + menuList[i].name + '"></img></div>';
             toHtml += '<div class="sName">' + menuList[i].name + '</div>';
             toHtml += '<h1 class="menuviewitem">' + model.getDishPrice(menuList[i].id) + 'kr</h1></div>';
             $("#menuviewinner").append(toHtml);
+            } else {
+                $("#menuviewinner").append("");
+            }
         }
 	}
 

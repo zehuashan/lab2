@@ -35,5 +35,9 @@ var MasterController = function(views, model) {
 		this.hideAll();
 		views[5].container.show();
 	}
+    
+    this.addToMenu = function (id) {
+        model.addDishToMenu(id);
+    }
 
 }

@@ -4,7 +4,7 @@ var DinnerModel = function () {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 4;
 	this.observers = [];
-    var savedDish = 200;
+    var savedDish = 1;
     
     this.trackId = function(id) {
         savedDish = id;
@@ -162,9 +162,8 @@ var DinnerModel = function () {
         		removeDishFromMenu(menu[key].id);
         	}
         }
-        if(dish.type == "starter") menu[0] = dish;
-        if(dish.type == "main dish") menu[1] = dish;
-        if(dish.type == "dessert") menu[2] = dish;
+        menu.push(dish);
+        this.notifyObservers();
 	}
 
 	//Removes dish from menu
@@ -175,7 +174,7 @@ var DinnerModel = function () {
         		delete menu[key];
         	}
         }
-		this.notifyObservers(menu);
+		this.notifyObservers();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -206,7 +205,7 @@ var DinnerModel = function () {
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
 	  for(key in dishes){
-			if(dishes[key].id == id) {
+			if(dishes[key].id == id) { 
 				return dishes[key];
 			}
 		}

@@ -9,6 +9,7 @@ var DishPrepView = function (container,model) {
 	var prepToHtml= function(arg){        
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
+            if(menuList[i] != undefined) {
 			toHtml = '<div class="dishPrepCont">';
 			toHtml +='<div class="prepCont">';
 			toHtml +='<div class="prepContPic">'
@@ -25,6 +26,9 @@ var DishPrepView = function (container,model) {
 			toHtml +='</div>';
 			toHtml +='</div>';
             $("#preperations").append(toHtml);
+            } else {
+                $("#preperations").append("");
+            }
         }
 	}
 

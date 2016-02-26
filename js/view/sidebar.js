@@ -10,7 +10,7 @@ var Sidebar = function (container,model) {
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice()); 
     this.confirmBtn = $(".confirmbtn");
-	//this.removeItemFromMenu = $("#101");
+	
 
 	var priceToHtml = function() {   
     this.menuList = model.getFullMenu();
@@ -22,16 +22,21 @@ var Sidebar = function (container,model) {
         	pending = model.getFullMenu();
         }
         for(var i = 0; i < menuList.length; i++) {
+            if(menuList[i] != undefined) {
             toHtml = '<div class="leftdivitem" id="'+ menuList[i].id  +'" title="Click to remove dish.">';
 			toHtml += '<div class="hvr-back-pulse">';
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].name + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
          	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i].id); + 'kr</p></div></div>';
             $("#leftdiv3").append(toHtml);
+            } else {
+                $("#leftdiv3").append("");
+            }
         }
     }
 	priceToHtml();
 	model.addObserver(this);
+    this.removeItemFromMenu = $(".leftdivitem");
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
 			this.numberOfGuests.html(model.getNumberOfGuests());
