@@ -4,12 +4,8 @@ var SidebarController = function(view, model, masterController) {
    masterController.showOverview();
 });
 
- view.removeItemFromMenu.click(function () {
-     //TODO
-    console.log("test");
-    console.log(this.id);
-
-    model.trackId(this.id);
+ $("#leftdiv3").on("click", ".removeButton", function () {
+    
     model.removeDishFromMenu(this.id);
  });
 	
