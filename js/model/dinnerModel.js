@@ -15,7 +15,61 @@ var DinnerModel = function () {
         return savedDish;
     }
 	
-	var menu = [];
+	var menu = [{
+		'id':1,
+		'name':'French toast',
+		'type':'starter',
+		'image':'toast.jpg',
+		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
+		'ingredients':[{ 
+			'name':'eggs',
+			'quantity':0.5,
+			'unit':'',
+			'price':10
+			},{
+			'name':'milk',
+			'quantity':30,
+			'unit':'ml',
+			'price':6
+			},{
+			'name':'brown sugar',
+			'quantity':7,
+			'unit':'g',
+			'price':1
+			},{
+			'name':'ground nutmeg',
+			'quantity':0.5,
+			'unit':'g',
+			'price':12
+			},{
+			'name':'white bread',
+			'quantity':2,
+			'unit':'slices',
+			'price':2
+			}]
+		},{
+		'id':101,
+		'name':'MD 2',
+		'type':'main dish',
+		'image':'bakedbrie.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ingredient 1',
+			'quantity':1,
+			'unit':'pieces',
+			'price':8
+			},{
+			'name':'ingredient 2',
+			'quantity':15,
+			'unit':'g',
+			'price':7
+			},{
+			'name':'ingredient 3',
+			'quantity':10,
+			'unit':'ml',
+			'price':4
+			}]
+		}];
 
     this.notifyObservers = function(obj) {
 		for(var i=0; i<this.observers.length; i++) {

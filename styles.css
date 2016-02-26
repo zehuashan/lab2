@@ -235,6 +235,13 @@ left:52%;
 	border: 2px solid black;
 	background:rgba(255,255,255,1);
 }
+.sName {
+	background:rgba(255,165,0,1);
+	width:140px;
+	padding: 3px 3px 3px 3px;
+	border: 0px 5px 5px 5px solid;
+	border-color: white;
+}
 
 .selectdishbar{
 position:relative;

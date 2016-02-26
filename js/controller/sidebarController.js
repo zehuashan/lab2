@@ -7,9 +7,10 @@ var SidebarController = function(view, model, masterController) {
  view.removeItemFromMenu.click(function () {
      //TODO
     console.log("test");
-    model.trackId(this.id);
     console.log(this.id);
-    model.removeDishFromMenu(model.giveId());
+
+    model.trackId(this.id);
+    model.removeDishFromMenu(this.id);
  });
 	
  $("#numberOfGuests").change(function() {

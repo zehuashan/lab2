@@ -17,7 +17,7 @@ var Sidebar = function (container,model) {
     var pending = "";
     var toHtml = "";
        if(menuList.length==0){
-        	pending = "pending"
+        	pending = "pending";
         } else {
         	pending = model.getFullMenu();
         }
@@ -38,8 +38,11 @@ var Sidebar = function (container,model) {
 	model.addObserver(this);
 
     this.removeItemFromMenu = $(".leftdivitem");
+
 	//This function gets called when there is a change at the model
 		this.update = function(arg){
+
+			this.menuList = model.getFullMenu();
 			this.numberOfGuests.html(model.getNumberOfGuests());
 			this.totalPrice.html(model.getTotalMenuPrice());
 			this.removeItemFromMenu = $(".leftdivitem");
