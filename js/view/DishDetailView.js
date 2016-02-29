@@ -10,7 +10,6 @@ var DishDetailView = function (container,model) {
     this.confBut = container.find("#confBut")
 	
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
-    /*
 	var dishId = parseInt(model.giveId());
 	var printIngridients = function(id){
 		var toHtml = "";
@@ -37,7 +36,6 @@ var DishDetailView = function (container,model) {
 		$("#dishDetailText").append(toHtml1);
 		$("#rightcont3").append(toHtml2);
 	}
-	*/
 	
 	//model.addObserver(this);
 	//this.ingTotPrice.html(totalPrice);

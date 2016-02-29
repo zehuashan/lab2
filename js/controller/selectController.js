@@ -1,6 +1,14 @@
 var SelectController = function(view, model, masterController) {
     view.sImg.click(function() {
+    	console.log("test");
         model.trackId(this.id);
+        masterController.showDetail();
+
+    });
+
+    $("#dishcontent").on("click", "a", function() {
+    	console.log("test");
+    	model.trackId(this.id);
         masterController.showDetail();
     });
 
@@ -13,17 +21,19 @@ var SelectController = function(view, model, masterController) {
         	if (data.search(new RegExp(filter, "i")) >= 0 && $(this).hasClass(type)) {
                 $(this).show();
             };
-    });
+    	});
     });
     
     $("select").change(function() {
-        var type = $(this).find('option:selected').text().toLowerCase();
-        console.log(type);
+        var type = $(this).find('option:selected').text();
 
         $(".col-md-3").each(function(){
         	$(this).hide();
 
         	if($(this).hasClass(type)){
+        		$(this).show();
+        	}
+        	if(type == 'All') {
         		$(this).show();
         	}
         });
