@@ -13,13 +13,13 @@ var DishDetailView = function (container,model) {
 	var dishId = parseInt(model.giveId());
 	var printIngridients = function(id){
 		var toHtml = "";
-		var ingredientsArray = model.getDish(id).ingredients;
+		var ingredientsArray = model.getDish(id).Ingredients;
 		for(var i = 0; i < ingredientsArray.length; i++){
-		toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].quantity*model.getNumberOfGuests() + ' ' + ingredientsArray[i].unit +'</div>';
-        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].name + '</p></div>';
+		toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Quantity*model.getNumberOfGuests() + ' ' + ingredientsArray[i].Unit +'</div>';
+        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Name + '</p></div>';
         toHtml +='<div class="col-sm-3"><p>SEK</p></div>';
-        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].price*model.getNumberOfGuests() + '</p></div>';
-		totalPrice =  totalPrice + ingredientsArray[i].price*model.getNumberOfGuests();
+        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Quantity*model.getNumberOfGuests() + '</p></div>';
+		totalPrice =  totalPrice + ingredientsArray[i].Quantity*model.getNumberOfGuests();
 		}		
 		$("#ingredientsTable").append(toHtml);
 	}
@@ -28,11 +28,11 @@ var DishDetailView = function (container,model) {
 	var printDishInfo = function(id){
 		var toHtml1 = "";
 		var toHtml2 = "";
-		toHtml1 = '<h1 style="padding-left:2%;" id="dishName"> '+ model.getDish(id).name +' </h1>';
-		toHtml1 +='<div style="padding-left:2%"><div class="sImg"><img src="images/' + model.getDish(id).image + '"></img></div>';
-		toHtml1 +='<div id="description"><p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span></p></div>';
+		toHtml1 = '<h1 style="padding-left:2%;" id="dishName"> '+ model.getDish(id).Title +' </h1>';
+		toHtml1 +='<div style="padding-left:2%"><div class="sImg"><img src="images/' + model.getDish(id).ImageURL + '" width="480" height="480"></img></div>';
+		toHtml1 +='<div id="description"><p><span> model.getDish(id).Description</span></p></div>';
 		toHtml2 = '<h1> Preperation </h1>';
-		toHtml2 += '<p>'+ model.getDish(id).description +'</p>';
+		toHtml2 += '<p>'+ model.getDish(id).Instructions +'</p>';
 		$("#dishDetailText").append(toHtml1);
 		$("#rightcont3").append(toHtml2);
 	}
