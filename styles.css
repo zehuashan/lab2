@@ -396,6 +396,8 @@ border-width: 2px;
 .sImg {
 	position: relative;
     left:25%;
+    width:140px;
+    height: 140px;
 }
 
 .sDisc{
