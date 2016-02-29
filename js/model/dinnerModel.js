@@ -165,6 +165,41 @@ var DinnerModel = function () {
 		}
 	}
 	
+	// ---------------------------------Lab 3 starts here!-------------------------------------
+
+	var apiKey = "1hg3g4Dkwr6pSt22n00EfS01rz568IR6";
+
+	this.getRecipeJson = function(id) {
+	var recipeID = id;
+	var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+	$.ajax({
+         type: "GET",
+         dataType: 'json',
+         cache: false,
+         url: url,
+         success: function (data) {
+            alert('success');
+            //console.log(data);
+            }
+         });
+       }
+
+    this.getRecipeSearchJson = function(keyword) {
+        var titleKeyword = keyword;
+        var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+            + titleKeyword 
+            + "&api_key="+apiKey;
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            cache: false,
+            url: url,
+            success: function (data) {
+                alert('success');
+                //console.log(data);
+            }
+        });
+    }
 
 
 	// the dishes variable contains an array of all the 
