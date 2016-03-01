@@ -1,14 +1,8 @@
 var SelectController = function(view, model, masterController) {
-    view.sImg.click(function() {
-    	console.log("test");
-        model.trackId(this.id);
-        masterController.showDetail();
-
-    });
 
     $("#dishcontent").on("click", "a", function() {
-    	console.log("test");
     	model.trackId(this.id);
+    	//console.log(model.giveId() + ":ID");
         masterController.showDetail();
     });
 

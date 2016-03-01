@@ -85,27 +85,23 @@ var DinnerModel = function () {
         return totalPrice * numberOfGuests;
 	}
 
-	this.getDishPrice = function (id) {
-		for (key in dishes) {
-			if (dishes[key].id == id) {
-				var pris = 0;
-				for (ingredient in dishes[key].ingredients) {
-					pris += dishes[key].ingredients[ingredient].price;
-				}
-				pris = pris*numberOfGuests;
-				return pris;
-			};
+	this.getDishPrice = function (inDish) {
+		var price = 0;
+		for (key in inDish.Ingredients) {
+			price += inDish.Ingredients[key].Quantity;
 		}
+		price = price * numberOfGuests;
+		return price;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
-	this.addDishToMenu = function(id) {
+	this.addDishToMenu = function(inDish) {
 		//TODO Lab 2
-        var dish = this.getDish(id);
+        var dish = inDish;
         for(key in menu) {
-        	if(menu[key].type == dish.type) {
-        		this.removeDishFromMenu(menu[key].id);
+        	if(menu[key].Category == dish.Category) {
+        		this.removeDishFromMenu(menu[key].RecipeID);
         	}
         }
         menu.push(dish);
@@ -116,7 +112,7 @@ var DinnerModel = function () {
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
         for(key in menu) {
-        	if(menu[key].id == id) {
+        	if(menu[key].RecipeID == id) {
         		delete menu[key];
         	}
         }
@@ -125,8 +121,8 @@ var DinnerModel = function () {
 
 	this.getDishName = function (id) {
 		for (key in dishes) {
-			if(dishes[key].id == id) {
-				return dishes[key].name;
+			if(dishes[key].RecipeID == id) {
+				return dishes[key].Title;
 			}
 		}
 	}
@@ -136,8 +132,8 @@ var DinnerModel = function () {
 	// API key for BigOven data.
 	var apiKey = "1hg3g4Dkwr6pSt22n00EfS01rz568IR6";
 
-    //function that returns a dish of specific ID
-	this.getDish = function (id) {
+    //pass id and addDishToMenu
+	this.getDish = function (id, cb) {
 		model = this;
 		var recipeID = id;
 		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
@@ -148,15 +144,15 @@ var DinnerModel = function () {
          	url: url,
          	success: function (data) {
             	//alert('success');
+            	//cb(null, data);
             	model.notifyObservers(data);
-
-            	//console.log(data);
+            	console.log("getDish:" + data);
             }
         });
 	}
 
-	//Get dish from search keyword.
-	this.getAllDishes = function () {
+	//
+	this.getAllDishes = function (id, cb) {
 		model = this;
         var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&api_key="+apiKey;
         $.ajax({
@@ -166,8 +162,9 @@ var DinnerModel = function () {
             url: url,
             success: function (data) {
                 //alert('success');
+                //cb(null, data);
                 model.notifyObservers(data);
-                //console.log(data);
+                console.log(data);
             }
         });
     }	

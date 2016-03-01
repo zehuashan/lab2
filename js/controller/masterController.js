@@ -27,6 +27,7 @@ var MasterController = function(views, model) {
 	
 	this.showDetail = function () {
 		this.hideAll();
+		model.getDish(model.giveId());
 		views[1].container.show();
 		views[3].container.show();
 	}
