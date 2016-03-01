@@ -5,8 +5,8 @@ var OverviewView = function (container,model) {
 	this.goToPrep = $("#goToPrep");
 	this.numberOfGuests = container.find(".statustext span");
 	this.totalPrice = container.find("#totPrice span");
-	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.totalPrice.html(model.getTotalMenuPrice()); 
+	//this.numberOfGuests.html(model.getNumberOfGuests());
+	//this.totalPrice.html(model.getTotalMenuPrice()); 
 	var menuList = model.getFullMenu();
 	console.log(menuList);
 	
@@ -24,16 +24,16 @@ var OverviewView = function (container,model) {
             }
         }
 	}
-
-	overviewToHtml();
 	
 	model.addObserver(this)
 
 	this.update = function(data){
-	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.totalPrice.html(model.getTotalMenuPrice());
-	$("#menuviewinner").empty();
+	
 	try {
+
+		$("#menuviewinner").empty();
+		this.numberOfGuests.html(model.getNumberOfGuests());
+		this.totalPrice.html(model.getTotalMenuPrice());
 		overviewToHtml(data);
 	} catch(err) {
 		console.log(err);

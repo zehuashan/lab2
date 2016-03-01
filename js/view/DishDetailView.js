@@ -4,8 +4,8 @@ var DishDetailView = function (container,model) {
 	this.container = container;
 	this.backButton = $("#backToSelectDish");
 	this.numberOfGuests = container.find(".numberOfGuests2 span");
-	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.ingTotPrice = container.find(".ingpricetot span");
+	//this.numberOfGuests.html(model.getNumberOfGuests());
+	//this.ingTotPrice = container.find(".ingpricetot span");
 	var totalPrice = 0;
     this.confBut = container.find("#confBut")
     model.addObserver(this);

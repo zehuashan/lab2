@@ -7,8 +7,8 @@ var Sidebar = function (container,model) {
 	
 	this.plusButton = $("#plusGuest");
 	this.minusButton = $("#minusGuest");
-	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.totalPrice.html(model.getTotalMenuPrice()); 
+	//this.numberOfGuests.html(model.getNumberOfGuests());
+	//this.totalPrice.html(model.getTotalMenuPrice()); 
     this.confirmBtn = $(".confirmbtn");
 	
 
