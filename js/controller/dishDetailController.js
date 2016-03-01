@@ -1,7 +1,9 @@
 var DishDetailController = function(view, model, masterController) {
-    view.backButton.click(function () {
-        masterController.showSelect();
-    });
+
+    $("#dishDetailText").on("click", "button", function() {
+    	console.log("hej");
+    	masterController.showSelect();
+	});
     
     view.confBut.click(function (data) {
         //console.log(model.getDish(model.giveId()));

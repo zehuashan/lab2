@@ -174,22 +174,19 @@ body {
 
 #rightcont1{
 	position: relative;
-	height:40vh;
 	width: 50%;
 }
 #rightcont2{
 	position: absolute;
 	border: 2px solid black;
-	height:40vh;
 	width: 50%;
 	right:0px;
 	top:0px;
 }
 #rightcont3{
-	position:absolute;
+	position:relative;
 	left:1%;
 	width:80%;
-	top:42vh;
 }
 
 .dishPrepCont{
@@ -261,6 +258,12 @@ border-width: 2px;
 overflow:auto;
 padding:2%;
 }
+
+#dishDetailText{
+position: relative;
+
+}
+
 .selects{
 position:relative;
 height:10vh;
@@ -291,7 +294,9 @@ border-width: 2px;
 	border:1px solid #000;
 }
 #ingredientsTable{
-	height:20vh;
+	padding-left: 10%;
+	height: 35vh;
+	overflow: auto;
 }
 .ingline1{
 	top:21vh;
@@ -398,6 +403,9 @@ border-width: 2px;
     left:25%;
     width:140px;
     height: 140px;
+}
+.detailImg{
+	left:2%;
 }
 
 .sDisc{

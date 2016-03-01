@@ -130,7 +130,7 @@ var DinnerModel = function () {
 	// ---------------------------------Lab 4 starts here!-------------------------------------
 
 	// API key for BigOven data.
-	var apiKey = "1hg3g4Dkwr6pSt22n00EfS01rz568IR6";
+	var apiKey = "H9n1zb6es492fj87OxDtZM9s5sb29rW3";
 
     //pass id and addDishToMenu
 	this.getDish = function (id, cb) {

@@ -16,13 +16,27 @@ var DishDetailView = function (container,model) {
 		var toHtml = "";
 		var ingredientsArray = data.Ingredients;
 		//console.log(ingredientsArray + "ing");
+
+		toHtml += '<table style="width:90%">';
 		for(var i = 0; i < ingredientsArray.length; i++){
-		toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Quantity*model.getNumberOfGuests() + ' ' + ingredientsArray[i].Unit +'</div>';
-        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Name + '</p></div>';
-        toHtml +='<div class="col-sm-3"><p>SEK</p></div>';
-        toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Quantity*model.getNumberOfGuests() + '</p></div>';
-		totalPrice =  totalPrice + ingredientsArray[i].Quantity*model.getNumberOfGuests();
-		}		
+
+		var priceOf = parseInt(ingredientsArray[i].Quantity*model.getNumberOfGuests());
+		
+		if(ingredientsArray[i].Unit==null){
+			//print nothing
+        }else{
+		toHtml +='<tr><td>' + priceOf + ' ' + ingredientsArray[i].Unit +'</td>';
+        toHtml +='<td>' + ingredientsArray[i].Name + '</td>';
+        toHtml +='<td>' + priceOf + '</td>';
+        toHtml +='<td>SEK</td></tr>';}
+
+		//toHtml +='<li><div class="col-sm-3"><p>' + priceOf + ' ' + ingredientsArray[i].Unit +'</div>';
+        //toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Name + '</p></div>';
+        //toHtml +='<div class="col-sm-3"><p>SEK</p></div>';
+        //toHtml +='<div class="col-sm-3"><p>' + priceOf + '</p></div></li>';
+		totalPrice =  totalPrice + priceOf;
+		}
+		toHtml += '</table>';
 		$("#ingredientsTable").append(toHtml);
 	}
 	
@@ -31,8 +45,10 @@ var DishDetailView = function (container,model) {
 		var toHtml1 = "";
 		var toHtml2 = "";
 		toHtml1 = '<h1 style="padding-left:2%;" id="dishName"> '+ data.Title +' </h1>';
-		toHtml1 +='<div style="padding-left:2%"><div class="sImg"><img src="' + data.ImageURL + '" width="480" height="480"></img></div>';
+		toHtml1 +='<div style="padding-left:2%"><div class="detailImg"><img src="' + data.ImageURL + '" width="320" height="320"></img></div>';
 		toHtml1 +='<div id="description"><p><span>' + data.Description + '</span></p></div>';
+		toHtml1 +='<button type="button" class="btn btn-warning" id="backToSelectDish">Back to select dish</button>';
+		
 		toHtml2 = '<h1> Preperation </h1>';
 		toHtml2 += '<p>'+ data.Instructions +'</p>';
 		$("#dishDetailText").append(toHtml1);
