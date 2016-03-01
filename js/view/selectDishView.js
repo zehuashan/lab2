@@ -11,7 +11,7 @@ var SelectDishView = function (container,model) {
 		var dishes = data.Results;
         	var toHtml = "";
         	for(var i = 0; i < dishes.length; i++) {
-         	   toHtml = '<a><div class="col-md-3 all '+ dishes[i].Category +'" id="' + dishes[i].RecipeID + '">';
+         	   toHtml = '<a id="' + dishes[i].RecipeID + '"><div class="col-md-3 all '+ dishes[i].Category +'">';
          	   toHtml += '<div class="sImg"><img src="' +dishes[i].ImageURL120 + '" alt="' + dishes[i].Title + '" height="140px" width="140px"></img>';
         	   toHtml += '<div class="sName"><h5>' + dishes[i].Title + '</h5></div></a>';
         	   $("#dishcontent").append(toHtml);

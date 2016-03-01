@@ -7,16 +7,17 @@ var OverviewView = function (container,model) {
 	this.totalPrice = container.find("#totPrice span");
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice()); 
-	this.menuList = model.getFullMenu();
+	var menuList = model.getFullMenu();
+	console.log(menuList);
 	
-	var overviewToHtml= function(arg){        
+	var overviewToHtml= function(data){        
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
-			toHtml = '<div class="col-md-4" id="' + menuList[i].id + '">';
-            toHtml += '<div class="sImg"><img src="images/' + menuList[i].image + '" alt="' + menuList[i].name + '"></img></div>';
-            toHtml += '<div class="sName">' + menuList[i].name + '</div>';
-            toHtml += '<h1 class="menuviewitem">' + model.getDishPrice(menuList[i].id) + 'kr</h1></div>';
+			toHtml = '<div class="col-md-4" id="' + menuList[i].RecipeID + '">';
+            toHtml += '<div class="sImg"><img src="images/' + menuList[i].ImageURL120 + '" alt="' + menuList[i].Title + '"></img></div>';
+            toHtml += '<div class="sName">' + menuList[i].Title + '</div>';
+            toHtml += '<h1 class="menuviewitem">' + model.getDishPrice(menuList[i]) + 'kr</h1></div>';
             $("#menuviewinner").append(toHtml);
             } else {
                 $("#menuviewinner").append("");
@@ -27,11 +28,15 @@ var OverviewView = function (container,model) {
 	overviewToHtml();
 	
 	model.addObserver(this)
-	this.update = function(arg){
+
+	this.update = function(data){
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice());
 	$("#menuviewinner").empty();
-	overviewToHtml();
-
+	try {
+		overviewToHtml(data);
+	} catch(err) {
+		console.log(err);
+	}
 	}
 }
