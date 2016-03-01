@@ -50,7 +50,7 @@ var DinnerModel = function () {
 	this.getSelectedDish = function (type) {
 		//TODO Lab 2
 		for(key in menu) {
-			if(menu[key].type == type) {
+			if(menu[key].Category == type) {
 				return menu[key];
 			}
 		}
@@ -67,8 +67,8 @@ var DinnerModel = function () {
 		//TODO Lab 2
         var allIngredients = new Array();
         for (key in menu) {
-            for(i in menu[key].ingredients) {
-                allIngredients.push(menu[key].ingredients[i]);
+            for(i in menu[key].Ingredients) {
+                allIngredients.push(menu[key].Ingredients[i]);
             }
         }
         return allIngredients;
@@ -80,7 +80,7 @@ var DinnerModel = function () {
         var totalPrice = 0;
         allIngredients = this.getAllIngredients();
         for (key in allIngredients) {
-            totalPrice += allIngredients[key].price;
+            totalPrice += allIngredients[key].Quantity;
         }
         return totalPrice * numberOfGuests;
 	}

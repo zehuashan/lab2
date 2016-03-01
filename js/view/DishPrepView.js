@@ -13,7 +13,7 @@ var DishPrepView = function (container,model) {
 			toHtml = '<div class="dishPrepCont">';
 			toHtml +='<div class="prepCont">';
 			toHtml +='<div class="prepContPic">'
-            toHtml +='<div class="img1"><img src="images/' + menuList[i].ImageURL120 + '" alt="' + menuList[i].Title + '"></img></div>';
+            toHtml +='<div class="img1"><img src="' + menuList[i].ImageURL120 + '" alt="' + menuList[i].Title + '"></img></div>';
 			toHtml +='</div>';
 			toHtml +='<div class="prepContDesc">';
 			toHtml +='<h1 id="dishName">' + menuList[i].Title + '</h1>';

@@ -5,9 +5,9 @@ var DishDetailController = function(view, model, masterController) {
     	masterController.showSelect();
 	});
     
-    view.confBut.click(function (data) {
+    view.confBut.click(function (id) {
         //console.log(model.getDish(model.giveId()));
-        model.addDishToMenu(data);
+        model.addDishToMenu(event.target.id);
     });
     
 }
