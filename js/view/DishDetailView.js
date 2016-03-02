@@ -66,7 +66,7 @@ var DishDetailView = function (container,model) {
 	//This function gets called when there is a change at the model
 	this.update = function(data){
 		//console.log("apa: " +data);
-		totalPrice = 0;
+		//totalPrice = 0;
         //dishId = parseInt(model.giveId());
 		
 		try {

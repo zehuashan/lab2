@@ -138,6 +138,7 @@ var DinnerModel = function () {
 
     //pass id and addDishToMenu
 	this.getDish = function (id, cb) {
+		$('#loading-image1').show();
 		model = this;
 		var recipeID = id;
 		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
@@ -157,9 +158,13 @@ var DinnerModel = function () {
             },
             error: function(){
     			alert('error! could not get dish data from server');
+  			},  			
+  			complete: function(){
+  				$('#loading-image1').hide();
   			}
         });
 	}
+
 
 	this.getRecipeJson = function(keyword) {
         var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
@@ -178,7 +183,8 @@ var DinnerModel = function () {
         });
     }
 
-	this.getAllDishes = function () {
+	this.getAllDishes = function (id, cb) {
+		$('#loading-image').show();
 		model = this;
 		var pg = 1;
 		var rpp = 25;
@@ -198,6 +204,9 @@ var DinnerModel = function () {
             },
             error: function(){
     			alert('error! could not get data from server');
+  			},
+  			complete: function(){
+  				$('#loading-image').hide();
   			}
         });
     }	

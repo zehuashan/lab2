@@ -21,9 +21,9 @@ var Sidebar = function (container,model) {
             if(menuList[i] != undefined) {
             toHtml = '<div class="leftdivitem removeButton" id="'+ menuList[i].RecipeID  +'" title="Click to remove dish.">';
 			toHtml += '<div class="hvr-back-pulse">';
-            toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].Title + '</p></div>';
-            toHtml += '<div class="col-sm-2"></div>';
-         	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + parseInt(model.getDishPrice(menuList[i])); + 'kr</p></div></div>';
+            toHtml += '<div class="col-md-6"><p class="leftcontlefttext">' + menuList[i].Title + '</p></div>';
+            //toHtml += '<div class="col-sm-2"></div>';
+         	toHtml += '<div class="col-md-6"><p class="leftcontrighttext">' + parseInt(model.getDishPrice(menuList[i])); + 'kr</p></div></div>';
             $("#leftdiv3").append(toHtml);
             }
         }
