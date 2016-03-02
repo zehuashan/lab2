@@ -147,7 +147,11 @@ var DinnerModel = function () {
             	//cb(null, data);
             	model.notifyObservers(data);
             	console.log("getDish:" + data);
-            }
+            },
+            error: function(){
+    			alert('error! could not get dish data from server');
+  			}
+
         });
 	}
 
@@ -163,9 +167,15 @@ var DinnerModel = function () {
             success: function (data) {
                 //alert('success');
                 //cb(null, data);
+                if (data.StatusCode==403){
+                	alert('error! could not retrieve data');
+                }
                 model.notifyObservers(data);
                 console.log(data);
-            }
+            },
+            error: function(){
+    			alert('error! could not get data from server');
+  			}
         });
     }	
 }
