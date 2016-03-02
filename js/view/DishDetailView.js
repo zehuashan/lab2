@@ -9,6 +9,7 @@ var DishDetailView = function (container,model) {
 	var totalPrice = 0;
     this.confirmDishButton = container.find("#confirmDishButton")
     model.addObserver(this);
+    ingredients2 = [];
 	
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
 	var dishId = parseInt(model.giveId());
@@ -19,15 +20,15 @@ var DishDetailView = function (container,model) {
 
 		toHtml += '<table style="width:90%">';
 		for(var i = 0; i < ingredientsArray.length; i++){
-
+			ingredients2.push(ingredientsArray[i].Quantity);
 		var priceOf = parseInt(ingredientsArray[i].Quantity*model.getNumberOfGuests());
 		
 		if(ingredientsArray[i].Unit==null){
 			//print nothing
         }else{
-		toHtml +='<tr><td>' + priceOf + ' ' + ingredientsArray[i].Unit +'</td>';
+		toHtml +='<tr><td id="priceOfDerp'+i+'">' + priceOf + ' ' + ingredientsArray[i].Unit +'</td>';
         toHtml +='<td>' + ingredientsArray[i].Name + '</td>';
-        toHtml +='<td>' + priceOf + '</td>';
+        toHtml +='<td id="priceOfIng'+i+'">' + priceOf + '</td>';
         toHtml +='<td>SEK</td></tr>';}
 		totalPrice =  totalPrice + priceOf;
 		}
@@ -61,6 +62,12 @@ var DishDetailView = function (container,model) {
 
 	//this.ingTotPrice.html(totalPrice);
 	
+	var updatePrice = function() {
+		for(var i=0; i < ingredients2.length;i++) {
+			container.find("#priceOfIng" + i).html(ingredients2[i] * model.getNumberOfGuests());
+			container.find("#priceOfDerp" + i).html(ingredients2[i] * model.getNumberOfGuests());
+		}
+	}
 	
 	
 	//This function gets called when there is a change at the model
@@ -71,6 +78,7 @@ var DishDetailView = function (container,model) {
 		
 		try {
 			this.numberOfGuests.html(model.getNumberOfGuests());
+			updatePrice();
 			printIngridients(data);
 			printDishInfo(data);
 			printConfButton(data);

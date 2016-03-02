@@ -11,8 +11,12 @@ var SelectController = function(view, model, masterController) {
     	var keyword = $(this).val();
   		var keyCode = e.keyCode || e.which;
   		if (keyCode === 13) { 
-    		model.getRecipeJson(keyword);
-  		} 
+  			if(keyword == "") {
+  				model.getAllDishes();
+  			} else {
+  				model.getRecipeJson(keyword);
+  			} 
+  		}
 	});
     
     $("select").change(function() {
