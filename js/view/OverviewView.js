@@ -15,10 +15,11 @@ var OverviewView = function (container,model) {
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
+            var priceOf = parseInt(model.getDishPrice(menuList[i]));
 			toHtml = '<div class="col-md-4" id="' + menuList[i].RecipeID + '">';
-            toHtml += '<div class="sImg"><img src="' + menuList[i].ImageURL + '" alt="' + menuList[i].Title + '"></img></div>';
+            toHtml += '<div class="sImg1"><img src="' + menuList[i].ImageURL + '" alt="' + menuList[i].Title + '" height="140" width=140"></img></div>';
             toHtml += '<div class="sName">' + menuList[i].Title + '</div>';
-            toHtml += '<h1 class="menuviewitem">' + model.getDishPrice(menuList[i]) + 'kr</h1></div>';
+            toHtml += '<h1 class="menuviewitem">' + priceOf + 'kr</h1></div>';
             $("#menuviewinner").append(toHtml);
             } else {
                 $("#menuviewinner").append("");
@@ -32,7 +33,7 @@ var OverviewView = function (container,model) {
 	
 	try {
 		this.numberOfGuests.html(model.getNumberOfGuests());
-		this.totalPrice.html(model.getTotalMenuPrice());
+		this.totalPrice.html(parseInt(model.getTotalMenuPrice()));
 		overviewToHtml(data);
 	} catch(err) {
 		console.log(err);
