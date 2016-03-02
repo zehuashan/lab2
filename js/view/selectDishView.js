@@ -20,6 +20,8 @@ var SelectDishView = function (container,model) {
 	
 	this.update = function(data){
 		try {
+			
+		$("#dishcontent").empty();
 			this.selectDish(data);
         } 
         catch(err){

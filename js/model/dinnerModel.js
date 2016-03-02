@@ -161,10 +161,28 @@ var DinnerModel = function () {
         });
 	}
 
-	//
-	this.getAllDishes = function (id, cb) {
+	this.getRecipeJson = function(keyword) {
+        var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+                  + keyword 
+                  + "&api_key="+apiKey;
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            cache: false,
+            url: url,
+            success: function (data) {
+                //alert('success');
+                //console.log(data);
+                model.notifyObservers(data);
+            }
+        });
+    }
+
+	this.getAllDishes = function () {
 		model = this;
-        var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&api_key="+apiKey;
+		var pg = 1;
+		var rpp = 25;
+        var url = "http://api.bigoven.com/recipes?pg="+ pg +"&rpp="+ rpp +"&api_key="+apiKey;
         $.ajax({
             type: "GET",
             dataType: 'json',

@@ -6,17 +6,14 @@ var SelectController = function(view, model, masterController) {
         masterController.showDetail();
     });
 
-    $("#Searchhere2").keyup(function () {
-        var filter = $(this).val();
-        var type = $("select").find('option:selected').text().toLowerCase();
-        $(".col-md-3").each(function() {
-        	var data = $(this).find('h5').text();
-        	$(this).hide();
-        	if (data.search(new RegExp(filter, "i")) >= 0 && $(this).hasClass(type)) {
-                $(this).show();
-            };
-    	});
-    });
+
+    $('#Searchhere2').on('keyup keypress', function(e) {
+    	var keyword = $(this).val();
+  		var keyCode = e.keyCode || e.which;
+  		if (keyCode === 13) { 
+    		model.getRecipeJson(keyword);
+  		} 
+	});
     
     $("select").change(function() {
         var type = $(this).find('option:selected').text();
