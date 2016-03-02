@@ -16,7 +16,7 @@ var OverviewView = function (container,model) {
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
 			toHtml = '<div class="col-md-4" id="' + menuList[i].RecipeID + '">';
-            toHtml += '<div class="sImg"><img src="' + menuList[i].ImageURL120 + '" alt="' + menuList[i].Title + '"></img></div>';
+            toHtml += '<div class="sImg"><img src="' + menuList[i].ImageURL + '" alt="' + menuList[i].Title + '"></img></div>';
             toHtml += '<div class="sName">' + menuList[i].Title + '</div>';
             toHtml += '<h1 class="menuviewitem">' + model.getDishPrice(menuList[i]) + 'kr</h1></div>';
             $("#menuviewinner").append(toHtml);
