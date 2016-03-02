@@ -6,7 +6,8 @@ var DishPrepView = function (container,model) {
 	//this.numberOfGuests.html(model.getNumberOfGuests());
 	var menuList = model.getFullMenu();
 	
-	var prepToHtml= function(arg){        
+	var prepToHtml= function(data){   
+	$("#preperations").empty();     
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
@@ -33,11 +34,11 @@ var DishPrepView = function (container,model) {
 	}
 	
 	model.addObserver(this)
-	this.update = function(arg){
+	this.update = function(data){
 	try	{
-		$("#preperations").empty();
+		
 		this.numberOfGuests.html(model.getNumberOfGuests());
-		prepToHtml();
+		prepToHtml(data);
 	} catch(err) {
 		console.log(err);
 	}

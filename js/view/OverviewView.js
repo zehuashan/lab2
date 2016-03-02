@@ -10,7 +10,8 @@ var OverviewView = function (container,model) {
 	var menuList = model.getFullMenu();
 	console.log(menuList);
 	
-	var overviewToHtml= function(data){        
+	var overviewToHtml= function(data){  
+	$("#menuviewinner").empty();      
 	var toHtml = "";    
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
@@ -30,8 +31,6 @@ var OverviewView = function (container,model) {
 	this.update = function(data){
 	
 	try {
-
-		$("#menuviewinner").empty();
 		this.numberOfGuests.html(model.getNumberOfGuests());
 		this.totalPrice.html(model.getTotalMenuPrice());
 		overviewToHtml(data);
