@@ -7,7 +7,7 @@ var DishDetailView = function (container,model) {
 	//this.numberOfGuests.html(model.getNumberOfGuests());
 	//this.ingTotPrice = container.find(".ingpricetot span");
 	var totalPrice = 0;
-    this.confBut = container.find("#confBut")
+    this.confirmDishButton = container.find("#confirmDishButton")
     model.addObserver(this);
 	
 	/* om en dish väljs i selectDish ska IDn skickas in i variabeln dishId, allt annat är fixat */
@@ -29,14 +29,12 @@ var DishDetailView = function (container,model) {
         toHtml +='<td>' + ingredientsArray[i].Name + '</td>';
         toHtml +='<td>' + priceOf + '</td>';
         toHtml +='<td>SEK</td></tr>';}
-
-		//toHtml +='<li><div class="col-sm-3"><p>' + priceOf + ' ' + ingredientsArray[i].Unit +'</div>';
-        //toHtml +='<div class="col-sm-3"><p>' + ingredientsArray[i].Name + '</p></div>';
-        //toHtml +='<div class="col-sm-3"><p>SEK</p></div>';
-        //toHtml +='<div class="col-sm-3"><p>' + priceOf + '</p></div></li>';
 		totalPrice =  totalPrice + priceOf;
 		}
 		toHtml += '</table>';
+		$("#ingredientsTable").empty();
+		$("#dishDetailText").empty();
+		$("#rightcont3").empty();
 		$("#ingredientsTable").append(toHtml);
 	}
 	
@@ -55,6 +53,11 @@ var DishDetailView = function (container,model) {
 		$("#rightcont3").append(toHtml2);
 	}
 	
+	var printConfButton = function(data) {
+		var toHtml3 = "";
+		toHtml3 = '<button type="button" id="'+ data.RecipeID +'" class="btn btn-secondary">Confirm Dish</button>';
+		$("#confirmDishButton").append(toHtml3);
+	}
 
 	//this.ingTotPrice.html(totalPrice);
 	
@@ -62,17 +65,15 @@ var DishDetailView = function (container,model) {
 	
 	//This function gets called when there is a change at the model
 	this.update = function(data){
-		console.log("apa: " +data);
+		//console.log("apa: " +data);
 		totalPrice = 0;
         //dishId = parseInt(model.giveId());
 		
 		try {
 			this.numberOfGuests.html(model.getNumberOfGuests());
-			$("#ingredientsTable").empty();
-			$("#dishDetailText").empty();
-			$("#rightcont3").empty();
 			printIngridients(data);
 			printDishInfo(data);
+			printConfButton(data);
 			this.ingTotPrice.html(totalPrice);
 		} catch(err) {
 			console.log(err);

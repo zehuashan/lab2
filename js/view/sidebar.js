@@ -14,13 +14,9 @@ var Sidebar = function (container,model) {
 
 	var priceToHtml = function(data) {   
     var menuList = model.getFullMenu();
+    console.log(menuList);
     var pending = "";
     var toHtml = "";
-       if(menuList.length==0){
-        	pending = "pending";
-        } else {
-        	pending = model.getFullMenu();
-        }
         for(var i = 0; i < menuList.length; i++) {
             if(menuList[i] != undefined) {
             toHtml = '<div class="leftdivitem removeButton" id="'+ menuList[i].RecipeID  +'" title="Click to remove dish.">';
@@ -37,15 +33,16 @@ var Sidebar = function (container,model) {
 
     //this.removeItemFromMenu = $(".leftdiv3");
 
+	this.removeItemFromMenu = $(".leftdiv3");
 	//This function gets called when there is a change at the model
 		this.update = function(data){
 
 			try {
+				
+				$("#leftdiv3").empty();
 				this.menuList = model.getFullMenu();
 				this.numberOfGuests.html(model.getNumberOfGuests());
 				this.totalPrice.html(model.getTotalMenuPrice());
-				this.removeItemFromMenu = $(".leftdiv3");
-				//$("#leftdiv3").empty();
 				priceToHtml(data);
 			} catch(err) {
 				console.log(err);

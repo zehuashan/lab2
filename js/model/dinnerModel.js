@@ -94,9 +94,13 @@ var DinnerModel = function () {
 		return price;
 	}
 
+	this.addDishHelp = function(id) {
+		this.getDish(id, addDishToMenu);
+	}
+
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
-	this.addDishToMenu = function(inDish) {
+	function addDishToMenu(inDish) {
 		//TODO Lab 2
         var dish = inDish;
         for(key in menu) {
@@ -144,14 +148,17 @@ var DinnerModel = function () {
          	url: url,
          	success: function (data) {
             	//alert('success');
-            	//cb(null, data);
+            	try{
+            		cb(data);
+            	} catch(err) {
+            		//something
+            	}
             	model.notifyObservers(data);
             	console.log("getDish:" + data);
             },
             error: function(){
     			alert('error! could not get dish data from server');
   			}
-
         });
 	}
 
