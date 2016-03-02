@@ -18,7 +18,7 @@ var DishPrepView = function (container,model) {
 			toHtml +='</div>';
 			toHtml +='<div class="prepContDesc">';
 			toHtml +='<h1 id="dishName">' + menuList[i].Title + '</h1>';
-			toHtml +='<p>'+ menuList[i].Description +'</p>';
+			toHtml +='<p>'+ menuList[i].Description.substring(0,550) +'</p>';
 			toHtml +='</div>';
 			toHtml +='<div class="prepContPrep">';
 			toHtml +='<h1> Preperation </h1>';

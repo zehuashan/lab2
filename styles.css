@@ -5,6 +5,11 @@ body {
   	-o-background-size: cover;
   	background-size: cover;
 }
+.mid{
+	position: relative;
+	left:50%;
+	top:20vh;
+}
 .topnav{ 
 	font-size: 350%;
 }
@@ -137,7 +142,6 @@ body {
 .leftdivitem{
 	position: relative;
 	width:100%;
-	height:5vh;
 }
 .leftdiv4{
 	position: relative;
@@ -154,6 +158,7 @@ body {
 .leftcontlefttext{
 	margin-top: 10%;
 	font-weight: 900;
+	width:100%;
 	float:left;
 }
 .leftcontrighttext{
