@@ -105,7 +105,7 @@ var DinnerModel = function () {
         var dish = inDish;
         for(key in menu) {
         	if(menu[key].Category == dish.Category) {
-        		this.removeDishFromMenu(menu[key].RecipeID);
+        		delete menu[key];
         	}
         }
         menu.push(dish);
@@ -154,7 +154,6 @@ var DinnerModel = function () {
             		//something
             	}
             	model.notifyObservers(data);
-            	console.log("getDish:" + data);
             },
             error: function(){
     			alert('error! could not get dish data from server');
@@ -178,7 +177,6 @@ var DinnerModel = function () {
                 	alert('error! could not retrieve data');
                 }
                 model.notifyObservers(data);
-                console.log(data);
             },
             error: function(){
     			alert('error! could not get data from server');
