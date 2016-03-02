@@ -23,7 +23,7 @@ var Sidebar = function (container,model) {
 			toHtml += '<div class="hvr-back-pulse">';
             toHtml += '<div class="col-sm-6"><p class="leftcontlefttext">' + menuList[i].Title + '</p></div>';
             toHtml += '<div class="col-sm-2"></div>';
-         	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + model.getDishPrice(menuList[i]); + 'kr</p></div></div>';
+         	toHtml += '<div class="col-sm-4"><p class="leftcontrighttext">' + parseInt(model.getDishPrice(menuList[i])); + 'kr</p></div></div>';
             $("#leftdiv3").append(toHtml);
             }
         }
@@ -42,7 +42,7 @@ var Sidebar = function (container,model) {
 				$("#leftdiv3").empty();
 				this.menuList = model.getFullMenu();
 				this.numberOfGuests.html(model.getNumberOfGuests());
-				this.totalPrice.html(model.getTotalMenuPrice());
+				this.totalPrice.html(parseInt(model.getTotalMenuPrice()));
 				priceToHtml(data);
 			} catch(err) {
 				console.log(err);

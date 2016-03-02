@@ -404,6 +404,12 @@ border-width: 2px;
     width:140px;
     height: 140px;
 }
+.sImg1 {
+	position: relative;
+    
+    width:140px;
+    height: 140px;
+}
 .detailImg{
 	left:2%;
 }
